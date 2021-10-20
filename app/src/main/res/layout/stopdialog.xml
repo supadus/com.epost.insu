@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="260.0dip"
+        android:layout_height="90.0dip"
+        android:orientation="vertical"
+        android:paddingLeft="1.0dip"
+        android:paddingRight="1.0dip" >
+
+        <TextView
+            android:id="@id/mVaccineStopDescription"
+            android:layout_width="220.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center|top"
+            android:paddingTop="5dp"
+            android:shadowColor="#ff000000"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="2.0"
+            android:text="@string/mv_dialog_stopdialog_textview"
+            android:textAppearance="@style/fontindex06" />
+
+        <Button
+            android:id="@+id/buttonStopNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/mv_no" />
+    </RelativeLayout>
+
+</RelativeLayout>

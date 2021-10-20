@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+공통 > 인트로 & 앱메인 > 인트로 & 메인
+ * ======================================================================
+ *          NJM_20200221    상단탭 명칭변경 (마이페이지->주요서비스)
+ *          NJM_20210218    소스정렬
+ * 1.5.4    NJM_20210507    [보험앱 메뉴명 정리]
+ * 1.5.5    NJM_20210513    [내소식 추가]
+ * ======================================================================
+-->
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <!--<1> Intro Layout -->
+        <RelativeLayout
+            android:id="@+id/relIntro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/img_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop" />
+            <LinearLayout
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/label_intro_title"
+                    android:textColor="@color/colorText_3"
+                    android:textSize="@dimen/label_default_size"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorText_0"
+                    android:textSize="@dimen/label_small_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginEnd="27dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/intro_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="SMART INSURANCE"
+                        android:textColor="#285285"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="우체국 보험"
+                        android:textColor="#285285"
+                        android:textSize="18dp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="ⓒ 2021 KOREAPOST\n고객님의 소중한 정보보호를 위해\n보안 솔루션이 실행중입니다."
+                        android:textColor="#7493b7"
+                        android:textSize="10dp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+
+                <!-- 하단 레이아웃 (프로그레스 & copyright) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+
+                            android:id="@+id/img_load"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:lineSpacingExtra="7sp"
+                            android:shadowColor="#1a000000"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:shadowRadius="8"
+                            android:text="SMART INSURANCE"
+                            android:textColor="#ffffff"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textProgress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/dlg_wait"
+                            android:textColor="@color/colorText_0"
+                            android:textSize="@dimen/label_small_size"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <!-- MA 인증 마크 -->
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_accessibility"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:id="@+id/rel_progress"
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ProgressBar
+
+                    android:layout_gravity="top"
+                    android:id="@+id/progress_page"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"/>
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</merge>

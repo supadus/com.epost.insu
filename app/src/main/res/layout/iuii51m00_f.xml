@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ 보험금청구 >  보험금청구 > 보험금청구조회 상세 (화면 ID : IUII51M00) - #26
+ * 01       2019-12-24    노지민     : 지급청구내역 상세조회에 사고일자, 진단명 추가
+ * 02       2020-03-04    노지민     : 보험금청구조회에서 이미지 조회 및 접수취소 기능 추가
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/linContents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_default_padding"
+        android:visibility="visible">
+
+        <!-- #######################################################################################
+            1. 접수신청정보
+        ############################################################################################ -->
+
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_tobig_size_20"
+            android:textColor="@color/colorText_10"
+            android:text="@string/label_request_info"
+            />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border_white"
+            android:layout_marginTop="10dp">
+
+            <!-- 접수번호 -->
+            <include
+                android:id="@+id/labelTextNumber"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- 접수일자 -->
+            <include
+                android:id="@+id/labelTextReqDate"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- 접수센터 -->
+            <include
+                android:id="@+id/labelTextCenter"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- 접수자 -->
+            <include
+                android:id="@+id/labelTextPersonInCharge"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- 접수센터 전화번호 -->
+            <include
+                android:id="@+id/labelTextCenterPhone"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- 청구자 -->
+            <include
+                android:id="@+id/labelTextReqName"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- 청구유형 -->
+            <include
+                android:id="@+id/labelTextReqCategory"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- 발생원인 -->
+            <include
+                android:id="@+id/labelTextReqReason"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- 청구사유 -->
+            <include
+                android:id="@+id/labelTextReqType"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- 진단명 //2019-12-26 추가 -->
+            <include
+                android:id="@+id/labelTextReqDignNm"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- 사고일자 //2019-12-17 추가 -->
+            <include
+                android:id="@+id/labelTextReqReasonDate"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- 사고장소 //2019-12-17 추가 -->
+            <include
+                android:id="@+id/labelTextReqPlace"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- 사고내용 //2019-12-17 추가 -->
+            <include
+                android:id="@+id/labelTextReqCntt"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- 보험처리예정일 -->
+            <include
+                android:id="@+id/labelTextDueDate"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- 송금요청 계좌번호 -->
+            <include
+                android:id="@+id/labelTextBankInfo"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- #######################################################################################
+            2. 청구서류
+        ############################################################################################ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_tobig_size_20"
+            android:textColor="@color/colorText_10"
+            android:text="@string/label_request_req_doc"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:id="@+id/linReqDocRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border_white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <!-- 청구서류 소스에서 자동생성 영역 -->
+         </LinearLayout>
+
+        <!-- #######################################################################################
+            3. 심사진행결과
+        ############################################################################################ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_tobig_size_20"
+            android:textColor="@color/colorText_10"
+            android:text="@string/label_request_result"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border_white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <!-- 상태 -->
+            <include
+                android:id="@+id/labelTextState"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- 처리일자 -->
+            <include
+                android:id="@+id/labelTextDoDate"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                layout="@layout/line_view_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- 사유 (진행결과 상태값에 따라 사유 | 보험금지급액 둘 중 하나만 보임)-->
+            <include
+                android:id="@+id/labelTextFailResult"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <!-- 보험금지급액 (진행결과 상태값에 따라 사유 | 보험금지급액 둘 중 하나만 보임) -->
+            <include
+                android:id="@+id/labelTextMoney"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFillRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_black_selector"
+                android:padding="15dp"
+                android:textSize="@dimen/button_text_size"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                style="?attr/borderlessButtonStyle"/>
+            <Button
+                android:id="@+id/btnFill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_navy_selector"
+                android:padding="15dp"
+                android:textSize="@dimen/button_text_size"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                style="?attr/borderlessButtonStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

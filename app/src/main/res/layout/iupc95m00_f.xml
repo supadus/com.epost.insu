@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ 인증 > 캬캬오페이인증 (화면 ID : IUPC95M00) - #60
+ 2020.12.10   양지훈   카카오페이인증 추가
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:fillViewport="true">
+
+            <LinearLayout
+
+
+                android:id="@+id/linContents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:splitMotionEvents="false">
+
+
+
+                <LinearLayout
+
+                    android:padding="@dimen/layout_default_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!-- 상단 아이콘 이미지 -->
+                    <ImageView
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/desc_img_auth_mobile"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_kakaopay_auth" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:textColor="#000000"
+                        android:text="서비스 안내"/>
+
+
+                </LinearLayout>
+
+                <!-- 유의사항 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp">
+
+                        <!-- 유의사항 안내 내용 기재 -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <!--android:layout_marginTop="10dp"-->
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/invisible_text"
+                                    android:textSize="@dimen/label_default_size"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_grey"/>
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/textNotice1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/guide_auth_kakaopay_notice1"
+                                android:textColor="@color/colorText_8"
+                                android:textSize="@dimen/label_big_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10dp">
+                            <!--android:layout_marginTop="10dp"-->
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/invisible_text"
+                                    android:textSize="@dimen/label_default_size"
+                                    android:visibility="invisible" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_grey"/>
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/textNotice2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/guide_auth_kakaopay_notice2"
+                                android:textColor="@color/colorText_8"
+                                android:textSize="@dimen/label_big_size" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- 이름 / 휴대폰번호 / 통신사/ 생년월일 /성별 입력 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:splitMotionEvents="false">
+
+
+
+                    <TextView
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:textColor="#000000"
+                        android:text="@string/label_iupc95m00_f_title2"/>
+
+                    <!-- 이름 -->
+                    <include
+                        android:id="@+id/labelEditName"
+                        layout="@layout/layout_label_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!-- 테스트 때문에 막음
+                    <include
+                        android:id="@+id/lableTextName"
+                        layout="@layout/layout_label_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                        -->
+
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!-- 생년월일 -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include
+                            android:id="@+id/labelTextBirth"
+                            layout="@layout/layout_label_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:ignore="DuplicateIncludedIds" />
+
+                        <!-- 직접 입력으로 인한 셀렉트 아이콘 주석 처리 -->
+                        <!--<ImageView-->
+                        <!--android:layout_width="18dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:adjustViewBounds="true"-->
+                        <!--android:scaleType="fitCenter"-->
+                        <!--android:src="@drawable/ic_down"-->
+                        <!--android:layout_gravity="right|center_vertical"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--tools:ignore="ContentDescription,RtlHardcoded" />-->
+                    </FrameLayout>
+
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <!-- 성별 -->
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/labelTextSex"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/label_small_size"
+                            android:textColor="@color/colorText_9"
+                            android:text="@string/label_sex"
+                            android:textStyle="bold"
+                            android:gravity="left"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:paddingRight="5dp"
+                            tools:ignore="RtlHardcoded" />
+
+                        <View
+                            android:layout_width="0.3dp"
+                            android:layout_height="match_parent"
+                            android:background="#D8D8D8"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"/>
+
+                        <com.epost.insu.control.SwitchingControl
+                            android:id="@+id/switchingSex"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/layout_default_padding"
+                            android:layout_marginRight="@dimen/layout_default_padding" />
+                    </LinearLayout>
+
+
+
+                    <!-- 통신사
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include
+                            android:id="@+id/labelTextTelecom"
+                            layout="@layout/layout_label_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_down"
+                            tools:ignore="ContentDescription,RtlHardcoded" />
+                    </FrameLayout>
+
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    -->
+
+                    <!-- 휴대폰 -->
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/labelMobile"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="15dp"
+                            android:textStyle="bold"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="15dp"
+                            android:text="@string/label_mobile"
+                            android:textColor="@color/colorText_9"
+                            android:textSize="@dimen/label_small_size"
+                            tools:ignore="RtlHardcoded" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+
+
+                            <!-- 2019-04-02 아래 주석(relKeyInput) 대체 (핸드폰번호 수정불가처리)-->
+                            <TextView
+                                android:id="@+id/txtMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:maxLines="1"
+                                android:padding="15dp"
+                                android:saveEnabled="false"
+                                android:textColor="@color/colorText_0"
+                                android:textColorHint="@color/colorHint"
+                                android:textSize="@dimen/label_small_size" />
+                            <!--
+                                                    <RelativeLayout
+                                                        android:id="@+id/relKeyInput"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:splitMotionEvents="false"
+                                                        tools:ignore="RtlHardcoded,RtlSymmetry">
+                                                        <include
+                                                            android:id="@+id/relKeyInput_sub"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_centerVertical="true"
+                                                            layout="@layout/transkey_user_editbox_2"/>
+                                                    </RelativeLayout>
+                            -->
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!-- 주민번호 -->
+                    <!-- 사용안함 visibility : gone -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:splitMotionEvents="false"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:labelFor="@+id/edtResident_1"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="15dp"
+                            android:text="@string/label_resident_number_s"
+                            android:textColor="@color/colorText_0"
+                            android:textSize="@dimen/label_small_size"
+                            tools:ignore="RtlHardcoded" />
+
+                        <include
+                            layout="@layout/line_view_v"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:id="@+id/edtResident_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="@string/desc_edt_resident_first"
+                            android:gravity="center_vertical"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:minWidth="100dp"
+                            android:paddingLeft="15dp"
+                            android:textColor="@color/colorText_0"
+                            android:textSize="16dp"
+                            tools:ignore="RtlHardcoded,RtlSymmetry,SpUsage" />
+
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="7dp"
+                            android:background="#9e9e9e"
+                            tools:ignore="RtlHardcoded" />
+
+                        <RelativeLayout
+                            android:id="@+id/resident_relInput"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.7"
+                            android:splitMotionEvents="false">
+
+                            <include
+                                android:id="@+id/resident_relInput_sub"
+                                layout="@layout/transkey_user_editbox_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <!-- 필요하나?-->
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- 약관동의 라벨 -->
+                <!--
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_default_padding"
+                    android:text="@string/label_agree_mobile_auth"
+                    android:textColor="@color/colorText_0"
+                    android:textSize="@dimen/label_default_size" />
+                -->
+
+                <!-- 약관동의 체크 UI -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="0dp">
+                        <com.epost.insu.control.CustomCheckView
+                            android:id="@+id/checkAll"
+
+                            android:layout_width="@dimen/check_view_size"
+                            android:layout_height="@dimen/check_view_size"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/checkAll"
+                            android:text="@string/label_kakaopay_agree"
+                            android:textColor="@color/colorText_0"
+                            android:textSize="@dimen/title_big_text_dp_size"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+                    </RelativeLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp">
+
+                        <!-- 개인정보 제3자 제공동의 내용 기재 -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10dp">
+                            <!--android:layout_marginTop="10dp"-->
+
+
+
+                            <TextView
+                                android:id="@+id/textGuide_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/guide_auth_kakaopay"
+                                android:textColor="@color/colorText_8"
+                                android:textSize="@dimen/label_small_size" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+                <!-- 휴대폰인증 버튼 -->
+                <include
+                    layout="@layout/c_btn_fill_navy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/keypadContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- mVaccine 키패드 click effect 포지션 위치를 위해 타이틀바 높이인 ?attr/actionBarSize 만큼 marginTop 적용(current 48dp)-->
+    <RelativeLayout
+        android:id="@+id/keypadBallon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-48dp" />
+
+</FrameLayout>
+

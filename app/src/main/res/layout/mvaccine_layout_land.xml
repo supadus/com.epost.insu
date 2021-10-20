@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mvaccineScanLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececec"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/mvaccine_logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <com.TouchEn.mVaccine.b2b2c.util.ProgressWheel
+            android:id="@+id/progress"
+            android:layout_width="149dp"
+            android:layout_height="151dp"
+            ProgressWheel:mv_pw_barColor="#f37a21"
+            ProgressWheel:mv_pw_barLength="60dp"
+            ProgressWheel:mv_pw_barWidth="10dp"
+            ProgressWheel:mv_pw_rimColor="#ffc079"
+            ProgressWheel:mv_pw_rimWidth="10dp"
+            ProgressWheel:mv_pw_spinSpeed="3dp"
+            ProgressWheel:mv_pw_contourColor="#f37a21"
+            ProgressWheel:mv_pw_text="0%"
+            ProgressWheel:mv_pw_textColor="#f37a21"
+            ProgressWheel:mv_pw_textSize="40sp" />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/smartmedicTextCheckPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="검사경로 : "
+                android:textColor="@color/index14"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/smartmedicTextCheckCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="검사 파일 수 :"
+                android:textColor="@color/index14"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/smartmedicTextVirusCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="악성코드 발견 수 : "
+                android:textColor="@color/index14"
+                android:textSize="15sp" />
+            
+            <TextView
+                android:id="@+id/textPatternVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="패턴 버전 : "
+                android:textColor="@color/index14"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout2"
+        android:clickable="false"
+        android:gravity="center"
+        android:longClickable="false"
+        android:text="악성코드 검사 진행 중 . . ."
+        android:textColor="#f37a21"
+        android:textColorHint="#f37a21"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/smartmedicScanStopButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/mvaccine_button_shape"
+        android:text="검사중지"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 다이얼로그 오른쪽 버튼 selector -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@drawable/btn_g_g_clicked"/>
+    <item android:drawable="@drawable/btn_g_g"/>
+</selector>

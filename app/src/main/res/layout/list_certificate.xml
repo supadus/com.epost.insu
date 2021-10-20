@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/layout_default_padding"
+    android:paddingTop="@dimen/layout_default_padding"
+    android:paddingRight="10dp"
+    android:paddingBottom="@dimen/layout_default_padding"
+    android:clickable="true"
+    android:background="@drawable/btn_w_r_selector"
+    tools:ignore="RtlHardcoded">
+
+    <ImageView
+        android:id="@+id/list_certificate_imgIcon"
+        android:layout_width="42dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_certificate"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="3dp"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:id="@+id/text_dn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/label_big_size"
+            android:textColor="@color/colorText_0"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_oid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_tiny_size"
+                android:textColor="@color/colorText_0"/>
+            <TextView
+                android:id="@+id/text_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_tiny_size"
+                android:paddingLeft="5dp"
+                android:textColor="@color/colorText_11"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_ca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_small_size"
+            android:textColor="@color/colorText_0"
+            />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_next"
+        android:layout_gravity="center_vertical"
+        tools:ignore="ContentDescription" />
+
+</LinearLayout>

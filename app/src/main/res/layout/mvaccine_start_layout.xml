@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="220.0dip"
+        android:layout_height="108.0dip"
+        android:background="@drawable/mvaccine_di_bg"
+        android:orientation="vertical"
+        android:paddingLeft="1.0dip"
+        android:paddingRight="1.0dip" >
+
+        <TextView
+            android:id="@id/mVaccineRunDescription"
+            android:layout_width="220.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:shadowColor="#ff000000"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="2.0"
+            android:text="@string/mv_mVaccineScanning"
+            android:textAppearance="@style/fontindex06"
+            android:textColor="#f37a21"
+            android:textColorHint="#f37a21" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 메인화면(IUCOA0M00) 우체국쇼핑, 우체국뱅킹, 트위터, 보험 ARS 안내 버튼 배경 Drawable -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+          android:drawable="@drawable/btn_link_clicked"/>
+    <item android:drawable="@drawable/btn_link"/>
+
+</selector>

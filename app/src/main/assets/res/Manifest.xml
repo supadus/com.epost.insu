@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<push>
+		<receiver> <!-- UPMC 설정 정보 -->
+			<log>y</log>
+			<!-- key 교환 방식 암호화 : 라이선스 발급시 요청 (hexa코드 16자리) 서버 3.8.1 이상 -->
+			<security-indexes>0x4ba 0x36e 0x72f 0x7ab 0x243 0x276 0x4fa 0x77d 0x598 0x72e 0x21b 0x5de 0x267 0x296 0x5f2 0x694</security-indexes>
+			<!-- 서버 버전 3.6/3.7/3.8/4.0-->
+			<version>5.0</version>
+
+			<!-- receiver server url(필수 설정) -->
+			<!-- 운영 -->
+<!--			<server>https://ipostbank.kr</server>-->
+			<!-- 개발 -->
+			<server>http://125.60.4.147</server>
+
+			<timeout>20000</timeout>
+
+			<!-- FCM설정 -->
+			<!-- FCM sender-id (push-type이 FCM일 경우 필수설정, sender id가 여러개인 경우, 공백없이 ","로 구분하여 등록한다. ) -->
+			<fcm-sender-id>1270514636</fcm-sender-id>
+
+			<!-- 푸쉬타입(필수설정) GCM:구글FCM(Public Push) / UPNS:유라클UPNS(Private Push)/ALL : Doze Mode 대응 (FCM : Dummy Data, UPNS : real Data)-->
+			<android-push-type>ALL</android-push-type>
+
+			<!-- 서비스 정책 ,user : one user multidevice, device : one user one device, default : user -->
+			<policy>device</policy>
+
+			<!-- stb(셋탑)/mobile(모바일)/mobile_old(디바이스 아이디 이전 버전) -->
+			<device-type>mobile</device-type>
+
+			<!-- upmc 연동시 휴대폰 번호 사용 여부  -->
+			<use-phone_number>n</use-phone_number>
+
+			<!-- 브로드캐스트 리시버에서 퍼미션 사용 여부를 설정 (Y/N) android 8.0 이상 필수 -->
+			<use-permission>Y</use-permission>
+		</receiver>
+	</push>
+</settings>

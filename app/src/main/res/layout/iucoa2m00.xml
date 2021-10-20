@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 공통 > 앱권한안내 > 앱권한안내 (화면 ID : IUCOA2M00) - #50 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="30dp"
+    android:background="@drawable/border_permission_dlg"
+    android:orientation="vertical"
+    android:paddingTop="30dp">
+
+    <!-- 타이틀 레이아웃 -->
+    <TextView
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        android:text="앱 접근 권한 안내" />
+
+    <TextView
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/guide_permisson_main"
+        android:textColor="@color/colorText_9"
+        android:textSize="@dimen/label_small_size" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="#eeeeee" />
+
+    <ScrollView
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+
+        <!-- 메인 아이콘 및 메인 가이드 Text -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- 라벨 -->
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guide_permisson_1"
+                android:textColor="@color/colorText_10"
+                android:textSize="@dimen/label_small_size" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorText_11"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="8sp"
+                android:text="필수적 접근 권한"/>
+
+
+            <!-- 각 권한 내용과 사용처 안내 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 저장소 : 기기 사진, 미디어, 파일 접근 동의 안내 레이아웃 -->
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="43.71dp"
+                        android:layout_height="43.71dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/desc_img_permission_storage"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_permission_storage" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_default_padding"
+                        android:orientation="vertical"
+                        tools:ignore="RtlHardcoded">
+
+                        <TextView
+                            android:id="@+id/textStorageLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_permission_storage"
+                            android:textColor="@color/colorText_10"
+                            android:textSize="@dimen/label_big_size" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/label_permission_storage_desc"
+                            android:textColor="@color/colorText_9"
+                            android:textSize="@dimen/label_small_size" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 전화번호 접근 동의 안내 레이아웃 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="43.71dp"
+                        android:layout_height="43.71dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/desc_img_permission_phone"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_permission_phone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_default_padding"
+                        android:orientation="vertical"
+                        tools:ignore="RtlHardcoded">
+
+                        <TextView
+                            android:id="@+id/textPhoneLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_permission_phone"
+                            android:textColor="@color/colorText_0"
+                            android:textSize="@dimen/label_big_size" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/label_permission_phone_desc"
+                            android:textColor="@color/colorText_9"
+                            android:textSize="@dimen/label_small_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorText_11"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="8sp"
+                android:text="선택적 접근 권한"/>
+
+            <!-- 카메라 접근 동의 안내 레이아웃 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="43.71dp"
+                    android:layout_height="43.71dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/desc_img_permission_camera"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_permission_camera" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_default_padding"
+                    android:orientation="vertical"
+                    tools:ignore="RtlHardcoded">
+
+                    <TextView
+                        android:id="@+id/textCameraLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_permission_camera"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/label_permission_camera_desc"
+                        android:textColor="@color/colorText_9"
+                        android:textSize="@dimen/label_small_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <View
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#edeeed">
+    </View>
+    <!-- 닫기 버튼 -->
+    <RelativeLayout
+
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnFill"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="15dp"
+            android:textColor="@color/colorText_11"
+            android:textSize="@dimen/button_big_dp_size"
+            tools:text="확인" />
+    </RelativeLayout>
+
+
+</LinearLayout>

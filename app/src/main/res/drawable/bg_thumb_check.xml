@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 갤러리 화면에서 사용되는 썸네일 체크 상태 BG View -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="rectangle">
+
+            <stroke android:width="3dp" android:color="@color/colorRed"/>
+
+            <solid android:color="#99606366"/>
+
+        </shape>
+    </item>
+</layer-list>

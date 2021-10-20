@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout_out"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transkey_border"
+    android:padding="@dimen/dialog_out_margin" >
+
+    <RelativeLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/transkey_navi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/transkey_user_navibar1"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/editlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/keypadContainer"
+            android:layout_alignRight="@+id/keypadContainer"
+            android:layout_below="@id/transkey_navi"
+            android:layout_marginBottom="@dimen/dialog_edit_margin_bottom"
+            android:layout_marginLeft="@dimen/dialog_edit_margin_left"
+            android:layout_marginRight="@dimen/dialog_edit_margin_right"
+            android:layout_marginTop="@dimen/dialog_edit_margin_top"
+            android:background="@drawable/transkey_round_corner"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="0dip"
+                android:layout_height="46dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="5.5"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/editContainer"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="4.5"
+                android:gravity="center" >
+
+                <EditText
+                    android:id="@+id/entry"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46dip"
+                    android:layout_centerVertical="true"
+                    android:background="@android:drawable/editbox_background"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:maxLines="1"
+                    android:password="true"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/keyscroll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginRight="44dip"
+                    android:scrollbars="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/keylayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ImageButton
+                    android:id="@+id/clearall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dip"
+                    android:background="@drawable/transkey_image_button"
+                    android:contentDescription="@string/transkey_clear_all" >
+                </ImageButton>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/keypadContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editlayout"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="@dimen/dialog_out_margin_bottom" />
+    </RelativeLayout>
+
+</RelativeLayout>

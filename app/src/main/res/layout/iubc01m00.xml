@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 스마트보험금청구 > 로그인방법선택 (화면 ID : IUCOB1M00) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 타이틀 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 컨텐츠 레이아웃 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_default_padding">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/label_default_size"
+                    android:gravity="center_horizontal"
+                    android:text="@string/guide_login_type"
+                    android:layout_marginTop="@dimen/layout_default_padding"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- 공동인증 로그인 -->
+                <include
+                    android:id="@+id/btnSmartReqLoginCertificate"
+                    layout="@layout/c_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:background="@android:color/transparent"/>
+
+                <!-- 지문인증 로그인 -->
+                <include
+                    android:id="@+id/btnSmartReqLoginFinger"
+                    layout="@layout/c_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:background="@android:color/transparent"/>
+
+                <!-- PIN인증 로그인 -->
+                <include
+                    android:id="@+id/btnSmartReqLoginPin"
+                    layout="@layout/c_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:background="@android:color/transparent"/>
+
+                <!-- 블록체인인증 로그인 -->
+                <include
+                    android:id="@+id/btnSmartReqLoginBlockchain"
+                    layout="@layout/c_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+
+</LinearLayout>

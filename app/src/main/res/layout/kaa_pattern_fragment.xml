@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#f8f8f8">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#f8f8f8"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/btn_login_pattern"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textAppearance="?attr/titleTextAppearance"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+    
+        <View android:background="#dcdcdc"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <!-- Custom Edit -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#f8f8f8"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:id="@+id/ci"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/btn_login_pattern"
+                android:src="@drawable/ic_pattern" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_below="@id/ci"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textColor="#003390"/>
+            <org.kftc.mobile.authenticator.ui.widget.PatternWidget
+                android:id="@+id/pattern"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="70dp"
+                android:gravity="bottom"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    <include
+        android:id="@+id/layout_loading"
+        layout="@layout/kaa_layout_loading"
+        android:visibility="gone"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Fragment_Keyguard (보안키패드 입력) 레이아웃 -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/fragment_keyGuard_scl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_default_padding">
+
+                <TextView
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="6sp"
+                    android:text="공동인증 암호"/>
+
+
+                <TextView
+                    android:id="@+id/fragment_keyguard_textLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_default_size"
+                    android:textColor="@color/colorText_9"
+                    android:text="@string/guide_input_pw"
+                    android:layout_marginBottom="20dp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <include
+                        android:id="@+id/fragment_keyGuard_relInputSub"
+                        layout="@layout/transkey_user_editbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <include
+                    layout="@layout/c_btn_fill_navy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/keypadContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </FrameLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/keypadBallon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-48dp"/>
+
+
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EXTAppDefence>
+<REQUEST>
+<OPCODE>02004</OPCODE>
+<SESSION>%SESSION%</SESSION>
+<BODY>
+<OS>%OS%</OS>
+<BIT>%BIT%</BIT>
+<TYPE>%TYPE%</TYPE>
+</BODY>
+</REQUEST>
+</EXTAppDefence>

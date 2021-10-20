@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_1">인증서 서명</string>
+    <string name="btn_2">인증서 삭제</string>
+    <string name="btn_3">인증서 비밀번호 변경</string>
+    <string name="btn_4">인증서 본인확인</string>
+    <string name="btn_5">비대칭키 암복호</string>
+    <string name="btn_6">EnvelopedData 암복호</string>
+    <string name="btn_7">대칭키 암복호</string>
+    <string name="btn_8">Hash 생성</string>
+    <string name="btn_9">Base64 생성</string>
+    <string name="btn_10">인증서 상세 정보</string>
+
+    <string name="exception_not_exist">인증서 존재하지 않음</string>
+    <string name="exception_failed_verify">서명검증 실패</string>
+</resources>

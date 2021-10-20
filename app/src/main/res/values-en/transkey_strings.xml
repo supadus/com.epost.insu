@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="transkey_clear_all">all clear</string>
+    <string name="transkey_before">prev</string>
+    <string name="transkey_next">next</string>
+    <string name="transkey_cancel">cancel</string>
+    <string name="transkey_complete">complete</string>
+    <string name="transkey_input_cancel">input cancel</string>
+    <string name="transkey_input_complete">input complete</string>
+    <string name="transkey_ok">OK</string>
+    <string name="transkey_input_security">input security</string>
+    <string name="transkey_input_comfirm">input comfirm</string>
+</resources>

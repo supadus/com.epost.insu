@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 공통 > 공동인증로그인 > 공동인증선택 & 공동인증암호 (화면 ID : IUCOC0M00 , IUC1M00) - #4 , #5 -->
+<!-- 공통 로그인 모듈에서도 동일한 레이아웃 사용 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <com.epost.insu.common.CustomViewPager
+        android:id="@+id/activity_login_cert_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

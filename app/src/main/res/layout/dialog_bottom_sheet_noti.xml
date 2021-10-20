@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 메인 > 하단팝업공지 -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/linBottomContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:orientation="vertical"
+            android:background="@color/transparent"
+            android:layout_weight="1">
+            <FrameLayout
+                android:id="@+id/frameNoti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top">
+                <!-- viewPagerNoti -->
+                <com.epost.insu.common.CustomViewPager
+                    android:id="@+id/viewPagerNoti"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    tools:layout_height="600dp"/>
+                <!-- indicatorNoti -->
+                <com.epost.insu.control.CustomIndicator
+                    android:id="@+id/indicatorNoti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="5dp" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickOneDayClose"
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor="@color/colorText_9"
+                android:textSize="@dimen/button_text_2_dp_size"
+                android:text="@string/btn_one_day_close"
+                android:layout_marginStart="15dp">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickNotiClose"
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor="@color/colorText_0"
+                android:textSize="@dimen/button_text_2_dp_size"
+                android:text="@string/btn_close"
+                android:gravity="end"
+                android:layout_marginRight="15dp">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 공통 > 공동인증로그인 > 공동인증 인증완료 (화면 ID : IUCOC3M00) - #54 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 타이틀바 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <!-- 콘텐츠 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_default_padding">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="175.6dp"
+                    android:layout_height="175.6dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_complete_cert"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/guide_auth_cert"
+                    android:textColor="@color/colorText_0"
+                    android:textSize="@dimen/label_default_size" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/c_btn_fill_navy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="text" />
+    <item type="id" name="btnGallery"/>
+    <item type="id" name="btnCamera"/>
+    <item type="id" name="btnSettings"/>
+
+    <!-- mvaccine id -->
+    <item type="id" name="icon"/>
+    <item type="id" name="allowStateTxt"/>
+    <item type="id" name="name"/>
+    <item type="id" name="avnomalResultLayout"/>
+    <item type="id" name="avnomalResultTitle"/>
+    <item type="id" name="rtsnomalResultTtl01"/>
+    <item type="id" name="avMalResultLayout"/>
+    <item type="id" name="avresultLayoutTitle"/>
+    <item type="id" name="delAllBtn"/>
+    <item type="id" name="RTSLayoutResult"/>
+    <item type="id" name="rtsResultTtl01"/>
+    <item type="id" name="rtsResultDesc01"/>
+    <item type="id" name="RTSLayoutResultLine"/>
+    <item type="id" name="scanResultList"/>
+    <item type="id" name="title"/>
+    <item type="id" name="alertbg"/>
+    <item type="id" name="btnLayout"/>
+    <item type="id" name="btndivider"/>
+    <item type="id" name="btnok"/>
+    <item type="id" name="btncancel"/>
+    <item type="id" name="desLayout"/>
+    <item type="id" name="showdes"/>
+    <item type="id" name="malwareType"/>
+    <item type="id" name="malwarePath"/>
+    <item type="id" name="deleteButtion"/>
+    <item type="id" name="item"/>
+    <item type="id" name="mVaccineStopDescription"/>
+    <item type="id" name="mVaccineRunDescription"/>
+    <item type="id" name="mVaccineCopyright"/>
+    <item type="id" name="mVaccineMainDescLayout"/>
+    <item type="id" name="versLayout"/>
+    <item type="id" name="productVers"/>
+    <item type="id" name="engineVers"/>
+    <item type="id" name="dualengineVers"/>
+    <item type="id" name="descLayout"/>
+    <item type="id" name="descript"/>
+    <item type="id" name="allowedCountLayout"/>
+    <item type="id" name="allowedAppCountDesc"/>
+    <item type="id" name="allowedAppCount"/>
+    <item type="id" name="appListLayout"/>
+    <item type="id" name="noneAppListLayout"/>
+    <item type="id" name="noneAppMsg"/>
+    <item type="id" name="appExistListLayout"/>
+    <item type="id" name="appList"/>
+</resources>

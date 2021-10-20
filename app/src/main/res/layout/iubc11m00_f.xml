@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 스마트보험금청구 > 개인정보처리동의 (화면 ID : IUBC11M00) -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/linContents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_default_padding">
+
+
+        <LinearLayout
+
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_11"
+                android:text="02"/>
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_10"
+                android:text="@string/label_smartreq_step_2"
+                />
+
+        </LinearLayout>
+
+
+
+        <!-- 소비자 권익보호에 관한 사항 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_big_size"
+                android:textColor="@color/colorText_0"
+                android:text="@string/label_customer_safe"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_big_size"
+                    android:textColor="@color/colorText_8"
+                    android:text="@string/guide_smartreq_customer_safe"
+                    android:padding="10dp"
+                    android:background="#F7F7F7"/>
+
+        </LinearLayout>
+
+        <!-- 약관 동의 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="0dp">
+
+                <com.epost.insu.control.CustomCheckView
+
+                    android:id="@+id/checkAll"
+                    android:layout_width="@dimen/check_view_size"
+                    android:layout_height="@dimen/check_view_size"
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="-5dp"
+                    tools:ignore="RtlHardcoded" />
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/checkAll"
+                    android:paddingRight="50dp"
+                    android:text="@string/label_agree_all"
+                    android:textColor="@color/colorText_0"
+                    android:textSize="@dimen/label_small_size"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#CDCDCD"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="417dp"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textAgreeLabel_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="50dp"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/label_small_size"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <com.epost.insu.control.CustomCheckView
+                        android:id="@+id/checkAgree_1"
+                        android:layout_width="@dimen/check_view_size"
+                        android:layout_height="@dimen/check_view_size"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="-5dp"
+                        tools:ignore="RtlHardcoded" />
+
+                </RelativeLayout>
+
+                <com.epost.insu.control.WebViewInScroll
+                    android:id="@+id/webViewAgree_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:importantForAccessibility="no" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/textAgreeLabel_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="50dp"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/label_small_size"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <com.epost.insu.control.CustomCheckView
+                        android:id="@+id/checkAgree_2"
+                        android:layout_width="@dimen/check_view_size"
+                        android:layout_height="@dimen/check_view_size"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="-5dp"
+                        tools:ignore="RtlHardcoded" />
+
+                </RelativeLayout>
+
+                <com.epost.insu.control.WebViewInScroll
+                    android:id="@+id/webViewAgree_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:importantForAccessibility="no" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/textAgreeLabel_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="50dp"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/label_small_size"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <com.epost.insu.control.CustomCheckView
+                        android:id="@+id/checkAgree_3"
+                        android:layout_width="@dimen/check_view_size"
+                        android:layout_height="@dimen/check_view_size"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="-5dp"
+                        tools:ignore="RtlHardcoded" />
+
+                </RelativeLayout>
+
+                <com.epost.insu.control.WebViewInScroll
+                    android:id="@+id/webViewAgree_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:importantForAccessibility="no" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/textAgreeLabel_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="50dp"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/label_small_size"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <com.epost.insu.control.CustomCheckView
+                        android:id="@+id/checkAgree_4"
+                        android:layout_width="@dimen/check_view_size"
+                        android:layout_height="@dimen/check_view_size"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="-5dp"
+                        tools:ignore="RtlHardcoded" />
+
+                </RelativeLayout>
+
+                <com.epost.insu.control.WebViewInScroll
+                    android:id="@+id/webViewAgree_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:importantForAccessibility="no" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/btnNext"
+            layout="@layout/c_btn_fill_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

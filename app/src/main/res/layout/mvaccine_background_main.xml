@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+	    <RelativeLayout 
+	        android:id="@+id/bgMainLayout"
+	        android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:background="#ffffff">
+		    
+    	    <LinearLayout
+    	        android:id="@+id/appBarLayout"
+		        android:layout_width="match_parent"
+		    	android:layout_height="56dp"
+		    	android:minHeight="56dp"
+		    	android:orientation="vertical"
+		    	android:gravity="center_horizontal"
+		    	android:background="#ff9d5f"
+		    	android:layout_alignParentTop="true">
+    	
+		        <ImageView
+			        android:id="@+id/mainIv"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:src="@drawable/mvaccine_bg_main_logo"
+			        android:layout_marginTop="15.3dp"
+			        />
+	
+			    <TextView
+			        android:id="@+id/mainTitleTv"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="터치엔 앰백신은 내 폰을 안전하게 지켜주는 백신앱입니다."
+			        android:textColor="#FFF"
+			        android:layout_marginTop="4dp"
+			        android:textSize="10dp"
+			        android:maxLines="1"
+			        />
+                
+    		</LinearLayout>
+    
+		    <LinearLayout
+		        android:id="@+id/linkDescriptLayout"
+		        android:layout_below="@id/appBarLayout"
+		        android:layout_width="match_parent"
+		    	android:layout_height="95dp"
+		    	android:background="#ededed"
+		    	android:gravity="center">
+			    <TextView 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textColor="#000000"
+			        android:gravity="center"
+			        android:textSize="13dp"
+			        android:lineSpacingExtra="7dp"
+			        android:text="현재 연동실행 중인 앱을 종료하면\nTouchEn mVaccine도 함께 종료됩니다."/>
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:id="@+id/linkedAppTitleLayout"
+		        android:layout_below="@id/linkDescriptLayout" 
+		        android:layout_width="match_parent"
+		    	android:layout_height="48dp">
+			    <TextView 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textColor="#000000"
+			        android:textSize="12dp"
+			        android:layout_marginLeft="15.7dp"
+			        android:layout_marginTop="25.3dp"
+			        android:text="TouchEn mVaccine과 연동 실행중인 앱"/>
+		    </LinearLayout>
+    
+		    <RelativeLayout
+		        android:id="@+id/linkedAppLayout"
+		        android:layout_below="@id/linkedAppTitleLayout" 
+		        android:background="@drawable/mvaccine_btm_banner_box"
+		        android:layout_width="328dp"
+		        android:layout_height="70.3dp"
+		        android:layout_gravity="center"
+				android:layout_centerHorizontal="true">
+		
+		        <ImageView
+		            android:id="@+id/linkedAppImage"
+		            android:layout_marginLeft="15.7dp"
+		            android:layout_width="36dp"
+		            android:layout_height="36dp"
+		            android:layout_centerVertical="true"/>
+		
+		        <LinearLayout
+		            android:layout_marginLeft="17dp"
+		            android:orientation="vertical"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@id/linkedAppImage">
+		            <TextView
+		                android:id="@+id/linkedAppLabel"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:textColor="#464646"
+		                android:textSize="15dp"/>
+		        </LinearLayout>
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginRight="17.7dp"
+		            android:background="@drawable/mvaccine_btm_banner_more"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"/>
+		
+		    </RelativeLayout>
+	    
+		    <LinearLayout 
+		        android:id="@+id/serviceTitleLayout"
+		        android:layout_below="@id/linkedAppLayout" 
+		        android:layout_width="match_parent"
+		    	android:layout_height="48dp"
+		    	android:background="#ffffff"
+		    	android:visibility="gone">
+			    <TextView 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textColor="#000000"
+			        android:textSize="12dp"
+			        android:layout_marginLeft="15.7dp"
+			        android:layout_marginTop="26dp"
+			        android:text="부가서비스"/>
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:id="@+id/mainBtmBannerWrapper"
+		        android:layout_below="@id/serviceTitleLayout" 
+				android:layout_gravity="center_horizontal"
+				android:gravity="center_horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_centerHorizontal="true"
+				android:visibility="gone">
+			</LinearLayout>
+			
+			
+		    <LinearLayout
+		        android:id="@+id/btmLayout"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:layout_centerHorizontal="true"
+		        android:gravity="center"
+		        android:layout_below="@id/mainBtmBannerWrapper" 
+		        android:layout_marginBottom="30dp"
+		        android:layout_marginTop="10dp"
+		        android:layout_alignParentBottom="true">
+		        
+		        <LinearLayout
+			        android:layout_width="250dp"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="20dp"
+			        android:orientation="vertical" >
+		
+			        <TextView
+			            android:id="@id/productVers"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:textColor="@color/index13"
+			            android:textSize="12dp" />
+			
+			        <TextView
+			            android:id="@id/engineVers"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:textColor="@color/index13"
+			            android:textSize="12dp" />
+			
+			        <TextView
+			            android:id="@id/dualengineVers"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:textColor="@color/index13"
+			            android:textSize="12dp"/>
+		    	</LinearLayout>
+		
+			    <TextView
+			        android:id="@id/descript"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center"
+			        android:gravity="center"
+			        android:text="@string/mv_COMMON_COPYRIGHT"
+			        android:textAppearance="@style/fontindex06"
+			        android:textColor="@color/index13" />
+		    
+		    </LinearLayout>
+            
+        </RelativeLayout>
+	    
+    </ScrollView>
+    
+    
+
+</RelativeLayout>

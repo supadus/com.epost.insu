@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+공통 > 환경설정 > 환경설정
+* 1.5.6    NJM_20210531    [설정알림숨김] 설정화면에서 알림 버튼 숨김 처리 (본부요청)
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+         >
+
+            <TextView
+                android:paddingStart="20dp"
+                android:gravity="center_vertical"
+                android:background="@color/colorSettingColor"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textSize="@dimen/label_small_size"
+                android:textColor="@color/colorText_12"
+                android:text="@string/label_normal_setting"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <!-- 푸시알림 On/Off (숨김처리) -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_default_padding"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/label_default_size"
+                        android:textColor="@color/colorText_0"
+                        android:text="@string/label_setting_push"
+                        android:layout_centerVertical="true"/>
+                    <com.epost.insu.control.OnOffControl
+                        android:id="@+id/onOffControl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:onText="@string/label_on"
+                        app:offText="@string/label_off"
+                        app:width="72dp"
+                        app:height="32dp"
+                        app:flagOn="true"
+                        app:animDuration="120"
+                        app:onTextSize="14"
+                        app:offTextSize="14"
+                        app:onTextColor="#FFFFFF"
+                        app:offTextColor="#FFFFFF"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+
+
+                <!-- 앱 버전 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:padding="@dimen/layout_default_padding">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/label_default_size"
+                        android:textColor="@color/colorText_0"
+                        android:text="@string/label_setting_version"
+                        android:layout_centerVertical="true"/>
+                    <TextView
+                        android:id="@+id/activity_setting_textVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/label_default_size"
+                        android:textColor="@color/colorTitle"
+                        android:text="@string/label_setting_version"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:paddingStart="20dp"
+                android:gravity="center_vertical"
+                android:background="@color/colorSettingColor"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textSize="@dimen/label_small_size"
+                android:textColor="@color/colorText_12"
+                android:text="@string/label_service_privacy"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <!-- 이용약관 버튼 레이아웃 -->
+                <RelativeLayout
+                    android:id="@+id/relBtnGuideService"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:padding="@dimen/layout_default_padding"
+                    android:clickable="true"
+                    android:background="@drawable/list_item_selector_rec">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/label_default_size"
+                        android:textColor="@color/colorText_0"
+                        android:text="@string/btn_setting_service"
+                        android:contentDescription="@string/desc_btn_setting_service"
+                        android:layout_centerVertical="true"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_next"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#CDCDCD"/>
+
+                <!-- 개인정보 취급방침 레이아웃 -->
+                <RelativeLayout
+                    android:id="@+id/relBtnGuidePrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:padding="@dimen/layout_default_padding"
+                    android:clickable="true"
+                    android:background="@drawable/list_item_selector_rec">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/label_default_size"
+                        android:textColor="@color/colorText_0"
+                        android:text="@string/btn_setting_privacy"
+                        android:contentDescription="@string/desc_btn_setting_privacy"
+                        android:layout_centerVertical="true"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_next"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#CDCDCD"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

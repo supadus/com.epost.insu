@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ 공통 > 로그인방법선택 > 로그인방법선택
+ * 1.5.2    NJM_20210319    [임시개발 로그인 기능 추가] 화면 추가
+ * 1.5.8    NJM_20210630    [금융인증서 도입]
+ * 1.6.1    NJM_20210722    [PASS인증서 도입] pass인증추가, 순서변경
+ * 1.6.1    NJM_20210722    [PASS인증서 도입] pass인증추가, 순서변경
+ * 1.6.2    NJM_20210729    [자동로그인 신규] 1차본 (기능 반영만)
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 타이틀 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 컨텐츠 레이아웃 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/layout_default_padding">
+
+                    <TextView
+                        android:id="@+id/title_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_iucob0m00_title"
+                        android:textColor="#565656"
+                        android:textSize="@dimen/title_text_size"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_default_padding"
+                        android:gravity="left|center_horizontal"
+                        android:text="@string/guide_login_type"
+                        android:textColor="@color/colorText_9"
+                        android:textSize="@dimen/label_default_size" />
+
+                    <!-- 푸시알림 On/Off (숨김처리) -->
+                    <RelativeLayout
+                        android:id="@+id/linAutoLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/layout_default_padding"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="자동로그인"
+                            android:textColor="@color/colorText_0"
+                            android:textSize="@dimen/label_default_size" />
+
+                        <com.epost.insu.control.OnOffControl
+
+
+                            android:id="@+id/onOffAutoLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+
+                            app:animDuration="120"
+                            app:flagOn="true"
+                            app:height="32dp"
+                            app:offText="@string/label_off"
+                            app:offTextColor="#FFFFFF"
+                            app:offTextSize="14"
+                            app:onText="@string/label_on"
+                            app:onTextColor="#FFFFFF"
+                            app:onTextSize="14"
+                            app:width="72dp"
+                            tools:ignore="RtlHardcoded" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="금융서비스 로그인"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+
+
+                    <!-- 공동인증 로그인 -->
+                    <include
+                        android:id="@+id/btnLoginCertificate"
+                        layout="@layout/c_btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginBottom="10dp" />
+                    <!-- 카카오페이 인증 로그인 -->
+                    <include
+                        android:id="@+id/btnLoginKakaopay"
+                        layout="@layout/c_btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#f7f7f7" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="조회서비스 로그인"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <!-- PIN인증 로그인 -->
+                        <include
+
+                            android:id="@+id/btnLoginPin"
+                            layout="@layout/c_btn_login"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1" />
+
+
+                        <!-- 금융인증 로그인 -->
+                        <include
+                            android:id="@+id/btnLoginFinCert"
+                            layout="@layout/c_btn_login"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="1" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+                        <!-- 지문인증 로그인 -->
+                        <include
+                            android:id="@+id/btnLoginFinger"
+                            layout="@layout/c_btn_login"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
+
+                        <!-- PASS인증 로그인 -->
+                        <include
+                            android:id="@+id/btnLoginPassCert"
+                            layout="@layout/c_btn_login"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 패턴인증 로그인 -->
+                        <include
+                            android:id="@+id/btnLoginPattern"
+                            layout="@layout/c_btn_login"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1" />
+                        <!-- 휴대폰본인인증 로그인 -->
+                        <include
+                            android:id="@+id/btnLoginMobile"
+                            layout="@layout/c_btn_login"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="1" />
+
+
+                    </LinearLayout>
+
+
+                    <!-- 개발 임시인증 레이아웃 -->
+                    <LinearLayout
+                        android:id="@+id/lin_dev"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/border_dlg"
+                        android:orientation="vertical"
+                        android:padding="15dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="우체국 직원 인증번호 로그인"
+                            android:textColor="@color/colorText_0"
+                            android:textSize="@dimen/label_default_size" />
+
+                        <EditText
+                            android:id="@+id/edtPw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/border_white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:textSize="@dimen/label_default_size" />
+
+
+                        <!-- 취소 | 확인 버튼 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnOkPw"
+                                style="?attr/borderlessButtonStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_navy_selector"
+                                android:text="확인"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/button_text_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!-- //내부고객 패스워드 입력 레이아웃 -->
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#f7f7f7" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/layout_default_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_reg_qualification"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/guide_login_qualification"
+                        android:textColor="@color/colorText_8"
+                        android:textSize="@dimen/label_default_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border_white_black"
+                        android:padding="0dp">
+
+                        <!-- 인증센터 버튼 -->
+                        <Button
+                            android:id="@+id/activity_login_btnManageS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_navy_right_selector"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/btn_manage_s"
+                            android:textColor="@color/text_color_btn_navy"
+                            android:textSize="@dimen/button_text_size" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#ffffff"
+>
+<!-- 
+	<Button
+	    android:id="@+id/buttonRow"
+	    android:background="@drawable/comn_btn_row"
+		android:layout_width="fill_parent"
+		android:layout_height="75dp"
+		android:layout_gravity="left|top"
+	/>
+ -->    
+
+	<FrameLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="111dp"
+	    android:layout_gravity="center"
+	    android:layout_margin="10dp"
+	    android:orientation="horizontal" >
+
+		<LinearLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="75dp"
+			android:orientation="horizontal"
+			android:layout_gravity="top|center_horizontal"
+			android:layout_marginTop="15dp"
+		>
+			<FrameLayout
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="90"
+				
+			>
+			   	<ImageView 
+					android:id="@+id/smartmedicImageIcon"
+					android:layout_width="54dp" 
+					android:layout_height="54dp"
+					android:layout_gravity="left|center_vertical"
+				/>
+			   	<ImageView 
+					android:id="@+id/smartmedicImageScanType"
+					android:layout_width="54dp" 
+					android:layout_height="54dp"
+					android:layout_gravity="left|center_vertical"
+				/>			   	
+		    </FrameLayout>
+			<FrameLayout
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="230"
+				
+			>
+				<LinearLayout 
+					android:layout_width="fill_parent"
+					android:layout_height="50dp"
+					android:orientation="vertical"
+					android:layout_gravity="center"
+					
+				>
+				   	<TextView 
+						android:id="@+id/smartmedicTextAppName" 
+						android:layout_width="fill_parent" 
+						android:layout_height="24dp"
+						android:layout_gravity="center"
+						android:textColor="#000000"
+						android:textSize="16sp"
+						android:textScaleX="1"
+						android:gravity="left|top"
+						android:lines="1"
+					/>
+				    <LinearLayout
+						android:layout_width="fill_parent" 
+						android:layout_height="20dp"
+						android:orientation="horizontal"
+						android:layout_marginTop="2dp"
+				    >				
+					   	<TextView 
+							android:id="@+id/smartmedicTextAppSize" 
+							android:layout_width="fill_parent" 
+							android:layout_height="fill_parent"
+							android:layout_gravity="center"
+							android:textColor="#727171"
+							android:textSize="14sp"
+							android:textScaleX="0.7"
+							android:gravity="left"
+							android:lines="1"
+						/>
+				   	</LinearLayout>
+				</LinearLayout>			   	
+		    </FrameLayout>
+			<FrameLayout
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="50"
+			>
+				<TextView
+				    android:id="@+id/smartmedicTextIndex"
+					android:layout_width="fill_parent" 
+					android:layout_height="fill_parent"
+					android:layout_gravity="center"
+					android:textColor="#727171"
+					android:textSize="12sp"
+					android:textScaleX="1.0"
+					android:gravity="center"
+					android:lines="1"
+				/>	
+		    </FrameLayout>	
+			<FrameLayout
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="50"
+			>
+
+				<ImageButton
+				    android:id="@+id/smartmedicButtonCheck"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center"
+				    android:background="@layout/mvaccine_checkbox" />
+
+		    </FrameLayout>
+		</LinearLayout>
+		<LinearLayout 
+		  android:background="#d5d5d6"
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:orientation="horizontal"
+			android:layout_gravity="bottom|center_horizontal"
+		/>
+			  
+	</FrameLayout>
+	
+</FrameLayout>

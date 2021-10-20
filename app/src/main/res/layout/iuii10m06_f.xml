@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+보험금청구 > 본인청구 > 6단계. 구비서류 첨부
+보험금청구 > 자녀청구 > 6단계. 구비서류 첨부
+
+* 01       2020-02-18    노지민     : 신분증 첨부하기 삭제 -> gone처리
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_default_padding">
+
+
+        <LinearLayout
+
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_11"
+                android:text="06"/>
+            <TextView
+                android:id="@+id/textSubTitle"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_10"
+                android:text="@string/label_req_step_6"
+                />
+
+        </LinearLayout>
+
+
+
+
+        <!-- 가이드 Text_1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가"
+                    android:textSize="@dimen/label_big_size"
+                    android:visibility="invisible"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:layout_width="@dimen/red_oval_dot_size"
+                    android:layout_height="@dimen/red_oval_dot_size"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/oval_grey"
+                    tools:ignore="ContentDescription" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guide_req_step_1_1"
+                android:textColor="@color/colorText_8"
+                android:textSize="@dimen/label_big_size" />
+
+        </LinearLayout>
+
+        <!-- 가이드 Text_2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가"
+                    android:textSize="@dimen/label_big_size"
+                    android:visibility="invisible"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:layout_width="@dimen/red_oval_dot_size"
+                    android:layout_height="@dimen/red_oval_dot_size"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/oval_grey"
+                    tools:ignore="ContentDescription" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guide_req_step_5_2"
+                android:textColor="@color/colorText_8"
+                android:textSize="@dimen/label_big_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textLabelAddPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/label_add_doc"
+                android:textColor="@color/colorText_0"
+                android:textSize="@dimen/title_big_text_dp_size"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        </LinearLayout>
+
+        <!-- 신분증 첨부 UI -->
+        <!-- 2020-0218 gone 사용안함 -->
+        <com.epost.insu.control.AddPhotoViewGroup
+            android:id="@+id/addPhotoView_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_white"
+            android:visibility="gone"
+            app:desc_btn_1="@string/desc_add_photo_2"
+            app:desc_btn_2="@string/desc_take_picture_2"
+            app:hint="@string/hint_add_doc"
+            app:label="@string/label_identity_card" />
+
+
+        <!-- 추가서류 첨부 UI -->
+        <com.epost.insu.control.AddPhotoViewGroup
+            android:id="@+id/addPhotoView_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            app:desc_btn_1="@string/desc_add_photo"
+            app:desc_btn_2="@string/desc_take_picture"
+            app:hint="@string/hint_add_doc" />
+        <!--app:label="@string/label_other_doc"-->
+
+        <include
+            layout="@layout/c_btn_fill_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

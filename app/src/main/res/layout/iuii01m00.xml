@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    보험금청구 > 보험금청구 > 보험금지급청구 첫화면 (화면 ID : IUII01M00) - #8
+    2019-05-29     노지민     청구안내 사항 위치 변경
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="ContentDescription">
+
+    <!-- 타이틀 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:paddingBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:padding="@dimen/layout_default_padding"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <!-- 청구안내사항을 확인하세요 레이아웃-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+                <!--android:background="@drawable/border_sky"-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    tools:ignore="RtlHardcoded">
+
+                    <!-- 안내사항 확인 문구-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/label_tobig_size_20"
+                        android:textColor="#000000"
+                        android:text="@string/label_req_benefit"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:minHeight="100dp"
+                    android:orientation="horizontal">
+                    <!-- 보험금청구 절차 안내 버튼 -->
+                    <Button
+                        android:id="@+id/btnReqCourse"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:drawableTop="@drawable/ico_process"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_gray_selector"
+                        android:text="@string/btn_guide_course"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="14dp"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+
+
+
+                    <Button
+                        android:visibility="gone"
+                        android:id="@+id/btn_test"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1.0"
+
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+
+                        android:background="@drawable/btn_gray_selector"
+                        android:text="인증센터로이동"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="14dp"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+
+                    <!-- 보험금청구시 구비서류 버튼 -->
+                    <Button
+
+                        android:id="@+id/btnReqDoc"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:drawableTop="@drawable/ico_billing_file"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_gray_selector"
+                        android:text="@string/btn_guide_document"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="14dp"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+
+                    <!-- 보험금청구시 청구동영상 버튼 -->
+                    <Button
+                        android:id="@+id/btnReqVideo"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:drawableTop="@drawable/ico_video"
+                        android:layout_height="match_parent"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_gray_selector"
+                        android:text="@string/btn_guide_video"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="14dp"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+
+                    <!-- 이미지 중지_200909 -->
+                    <!--<ImageView
+                        android:layout_width="100.85dp"
+                        android:layout_height="79.71dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="7.5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="bottom"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/guide_character"
+                        android:contentDescription="@string/desc_img_guide_person"
+                        tools:ignore="RtlHardcoded" />-->
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 보험금청구 안내 레이아웃 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--<ImageView
+                    android:layout_width="63.71dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_money"
+                    android:contentDescription="@string/desc_img_req"/>-->
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--android:layout_marginTop="10dp"-->
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/invisible_text"
+                            android:textSize="@dimen/label_default_size"
+                            android:visibility="invisible" />
+                        <ImageView
+                            android:layout_width="@dimen/red_oval_dot_size"
+                            android:layout_height="@dimen/red_oval_dot_size"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/oval_black"/>
+                    </FrameLayout>
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/textGuide_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_req_benefit_1"
+                        android:textColor="@color/colorText_8"
+                        android:textSize="@dimen/label_default_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/invisible_text"
+                            android:textSize="@dimen/label_default_size"
+                            android:visibility="invisible" />
+                        <ImageView
+                            android:layout_width="@dimen/red_oval_dot_size"
+                            android:layout_height="@dimen/red_oval_dot_size"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/oval_black" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/textGuide_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_req_benefit_2"
+                        android:textColor="@color/colorText_8"
+                        android:textSize="@dimen/label_default_size"
+                       />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/invisible_text"
+                            android:textSize="@dimen/label_default_size"
+                            android:visibility="invisible" />
+                        <ImageView
+                            android:layout_width="@dimen/red_oval_dot_size"
+                            android:layout_height="@dimen/red_oval_dot_size"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/oval_black" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/textGuide_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_req_benefit_3"
+                        android:textColor="@color/colorText_8"
+                        android:textSize="@dimen/label_default_size"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/invisible_text"
+                            android:textSize="@dimen/label_default_size"
+                            android:visibility="invisible" />
+                        <ImageView
+                            android:layout_width="@dimen/red_oval_dot_size"
+                            android:layout_height="@dimen/red_oval_dot_size"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/oval_black" />
+                    </FrameLayout>
+                    <TextView
+                        android:id="@+id/textGuide_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_req_benefit_4"
+                        android:textColor="@color/colorText_8"
+                        android:textSize="@dimen/label_default_size"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/invisible_text"
+                            android:textSize="@dimen/label_default_size"
+                            android:visibility="invisible" />
+                        <ImageView
+                            android:layout_width="@dimen/red_oval_dot_size"
+                            android:layout_height="@dimen/red_oval_dot_size"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/oval_black" />
+                    </FrameLayout>
+                    <TextView
+                        android:id="@+id/textGuide_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_req_benefit_5"
+                        android:textColor="@color/colorText_8"
+                        android:textSize="@dimen/label_default_size"
+
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f7f7f7">
+            </View>
+
+            <!-- 보험금신청 버튼 레이아웃 -->
+            <RelativeLayout
+                android:id="@+id/relReqBenefit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingBottom="@dimen/layout_default_padding"
+                android:paddingLeft="15dp"
+                android:paddingRight="@dimen/layout_default_padding"
+                android:paddingTop="@dimen/layout_default_padding"
+                tools:ignore="RtlHardcoded">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/ico_bill"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:contentDescription="@string/desc_btn_req_benefit"
+                        android:text="@string/btn_req_benefit"
+                        android:drawableRight="@drawable/btn_arrow"
+                        android:textColor="@color/colorText_1"
+                        android:textSize="@dimen/label_big_size"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <include layout="@layout/view_line"/>
+            <!-- 자녀보험금신청 버튼 레이아웃 -->
+            <RelativeLayout
+                android:id="@+id/relReqChild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:paddingTop="@dimen/layout_default_padding"
+                android:paddingBottom="@dimen/layout_default_padding"
+                android:paddingLeft="15dp"
+                android:paddingRight="@dimen/layout_default_padding"
+                tools:ignore="RtlHardcoded">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/ico_child"
+                        android:drawableRight="@drawable/btn_arrow"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/btn_req_child"
+                        android:contentDescription="@string/desc_btn_req_child"
+                        android:textColor="@color/colorText_1"
+                        android:textSize="@dimen/label_big_size"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+            <include layout="@layout/view_line"/>
+            <!-- 지급진행조회 버튼 레이아웃 -->
+            <RelativeLayout
+                android:id="@+id/relSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:paddingBottom="@dimen/layout_default_padding"
+                android:paddingLeft="15dp"
+                android:paddingRight="@dimen/layout_default_padding"
+                android:paddingTop="@dimen/layout_default_padding"
+                tools:ignore="RtlHardcoded">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/ico_file"
+                        android:drawableRight="@drawable/btn_arrow"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/btn_search_req"
+                        android:contentDescription="@string/desc_btn_search_req"
+                        android:textColor="@color/colorText_1"
+                        android:textSize="@dimen/label_big_size"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_line" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="25dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="25dp"
+        tools:ignore="RtlHardcoded">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgStatus"
+                android:layout_width="49.71dp"
+                android:layout_height="49.71dp"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_status_0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textStatus_1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colorText_0"
+                    android:textSize="@dimen/label_default_dp_size"
+                    tools:ignore="SpUsage"
+                    tools:text="심사접수\n완료" />
+
+                <TextView
+                    android:id="@+id/textStatus_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colorPurple"
+                    android:textSize="@dimen/label_default_dp_size"
+                    tools:ignore="SpUsage"
+                    tools:text="(자동심사반송)" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
+
+            <LinearLayout
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:text="@string/label_req_date"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_default_dp_size"
+                    tools:ignore="SpUsage" />
+
+                <TextView
+                    android:id="@+id/textReqDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/colorText_0"
+                    android:textSize="@dimen/label_default_dp_size"
+                    tools:ignore="SpUsage"
+                    tools:text="2020.06.19" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:text="@string/label_req_type"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_default_dp_size"
+                    tools:ignore="SpUsage" />
+
+                <TextView
+                    android:id="@+id/textReqType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/colorText_0"
+                    android:textSize="@dimen/label_default_dp_size"
+                    tools:ignore="SpUsage"
+                    tools:text="통원" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:text="@string/label_check_man"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_default_dp_size"
+                    tools:ignore="SpUsage" />
+
+                <TextView
+                    android:id="@+id/textCheckMan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/colorText_0"
+                    android:textSize="@dimen/label_default_dp_size"
+                    tools:ignore="SpUsage"
+                    tools:text="황승미" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:text="@string/label_pay_date"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_default_dp_size"
+                    tools:ignore="SpUsage" />
+
+                <TextView
+                    android:id="@+id/textPayDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/colorText_0"
+                    android:textSize="@dimen/label_default_dp_size"
+                    tools:ignore="SpUsage"
+                    tools:text="2020.06.19" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_next"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgAddDoc"
+        android:layout_width="59.14dp"
+        android:layout_height="59.14dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/desc_img_need_add_doc"
+        android:paddingTop="0.5dp"
+        android:paddingBottom="0.5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_add_doc"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</RelativeLayout>

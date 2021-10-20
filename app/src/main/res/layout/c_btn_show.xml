@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    로그인 방법 버튼
+    * 2019-01-20    노지민     : 인증 버튼 하단문구 가운데 정렬
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical"
+    android:background="@drawable/btn_w_r_selector"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:gravity="center"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:paddingRight="20dp"
+        tools:ignore="RtlHardcoded">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="46.28dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorText_1"
+            tools:text="보기"
+            android:textSize="@dimen/label_big_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_next"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+    </RelativeLayout>
+
+</LinearLayout>

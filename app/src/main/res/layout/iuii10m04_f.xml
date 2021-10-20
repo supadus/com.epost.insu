@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+보험금청구 > 본인청구 > 4단계. 보험청구서작성(청구내용1)
+보험금청구 > 자녀청구 > 4단계. 보험청구서작성(청구내용1)
+
+-->
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_default_padding">
+
+
+
+
+        <LinearLayout
+
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_11"
+                android:text="04"/>
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_10"
+                android:text="@string/label_req_step_4"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+        <!-- 부담보내역 조회 -->
+        <LinearLayout
+            android:id="@+id/linSmbrPsbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:background="@drawable/border_white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText_11"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textSize="@dimen/label_small_size"
+                android:text="@string/desc_smbr_psbl"
+                android:textStyle="bold"/>
+
+            <!-- 부담보내역 확인 버튼 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                >
+                <include
+                    layout="@layout/c_btn_fill_red"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border_white">
+
+            <!-- 청구유형 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/textCategory"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_req_category_n"
+                    android:contentDescription="@string/desc_category"
+                    android:textSize="@dimen/label_small_size"
+                    android:textColor="@color/colorText_0"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    tools:ignore="RtlHardcoded" />
+
+                <com.epost.insu.control.ButtonGroupView
+                    android:id="@+id/btnGroupCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dadada"/>
+
+            <!-- 발생원인 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/textReason"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_req_reason_n"
+                    android:contentDescription="@string/desc_reason"
+                    android:textSize="@dimen/label_small_size"
+                    android:textColor="@color/colorText_0"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    tools:ignore="RtlHardcoded" />
+
+                <com.epost.insu.control.ButtonGroupView
+                    android:id="@+id/btnGroupReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dadada"/>
+
+            <!-- 청구사유 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/textType"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_req_type_n"
+                    android:contentDescription="@string/desc_type"
+                    android:textSize="@dimen/label_small_size"
+                    android:textColor="@color/colorText_0"
+                    android:gravity="left"
+                    android:layout_marginTop="7dp"
+                    tools:ignore="RtlHardcoded"/>
+
+                <com.epost.insu.control.ButtonGroupView
+                    android:id="@+id/btnGroupType_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- 진단명/진단코드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border_white">
+
+            <!-- 진단명 -->
+            <include
+                android:id="@+id/labelEditDiseaseName"
+                layout="@layout/layout_label_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dadada"/>
+            <!-- 질병코드 -->
+            <include
+                android:id="@+id/labelEditDiseaseCode"
+                layout="@layout/layout_label_edittext"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- 사고일시/사고장소/사고경위 -->
+        <LinearLayout
+            android:id="@+id/linAccidentGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border_white"
+            android:visibility="gone">
+
+            <!-- 사고일시 -->
+            <include
+                android:id="@+id/labelTextAccidentDate"
+                layout="@layout/layout_label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="DuplicateIncludedIds" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dadada"/>
+
+            <include
+                android:id="@+id/labelEditAccidentPlace"
+                layout="@layout/layout_label_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dadada"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_accident_note_n"
+                    android:textSize="@dimen/label_small_size"
+                    android:textColor="@color/colorText_0"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    tools:ignore="RtlHardcoded" />
+
+                <EditText
+                    android:id="@+id/edtAccidentNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_small_size"
+                    android:textColor="@color/colorText_0"
+                    android:textColorHint="#666666"
+                    android:background="@android:color/transparent"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:maxLines="10"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="top"
+                    android:hint="@string/hint_accident_note"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 다음 버튼 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <include
+                layout="@layout/c_btn_fill_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

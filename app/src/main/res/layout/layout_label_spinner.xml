@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Spinner | Spinner로 구성된 레이아웃
+    * 2019-09-19    노지민     : 최근 청구 계좌 & 우체국 계좌 조회 후 화면에 초기세팅
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingRight="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        tools:text="분류"
+        android:id="@+id/label"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/edit"
+        android:textSize="@dimen/label_small_size"
+        android:textStyle="bold"
+        android:textColor="@color/colorText_9"
+        android:gravity="left"
+        tools:ignore="DuplicateIncludedIds,RtlHardcoded" />
+
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/label_small_size"/>
+
+</LinearLayout>

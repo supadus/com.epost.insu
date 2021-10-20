@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 인증 > 지문인증 > 지문인증등록 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 타이틀 바 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_default_padding">
+
+                <!-- 지문인증 서비스 이용안내 라벨 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/label_noti_bio_login"
+                    android:textColor="@color/colorText_10"
+                    android:textSize="@dimen/label_tobig_size_20" />
+
+
+                <!-- 지문인증 서비스 소개 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <!-- 서비스 사용안내 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="가"
+                                android:textSize="@dimen/label_default_size"
+                                android:visibility="invisible"
+                                tools:ignore="HardcodedText" />
+
+                            <ImageView
+                                android:layout_width="@dimen/red_oval_dot_size"
+                                android:layout_height="@dimen/red_oval_dot_size"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/oval_grey"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/guide_manage_bio"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_small_size" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--  라벨 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/label_choice_auth"
+                    android:textColor="@color/colorText_10"
+                    android:textSize="@dimen/label_tobig_size_20" />
+
+
+                <!-- 인증방법 선택 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <!-- 개인인증번호 로그인 -->
+                        <include
+                            android:id="@+id/linBioReg_1"
+                            layout="@layout/layout_bio_check"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:ignore="DuplicateIncludedIds" />
+                        <!-- 지문인증 로그인 -->
+                        <include
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/linBioReg_2"
+                            layout="@layout/layout_bio_check"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:ignore="DuplicateIncludedIds" />
+                        <!-- 패턴인증 로그인 -->
+                        <include
+                            android:id="@+id/linBioReg_3"
+                            layout="@layout/layout_bio_check"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:ignore="DuplicateIncludedIds" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--  라벨 -->
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/label_auth_sms_ars"
+                    android:textColor="@color/colorText_10"
+                    android:textSize="@dimen/label_tobig_size_20" />
+
+
+                <!-- 추가인증 : 인증완료시에만 표기됨 -->
+                <LinearLayout
+                    android:id="@+id/linSmArsComplete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:visibility="gone">
+
+                    <!-- 인증완료 라벨 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/label_auth_sms_ars_complete"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/label_small_size" />
+                </LinearLayout>
+
+                <!-- 추가인증(SMS/ARS) 버튼 -->
+                <LinearLayout
+                    android:id="@+id/linSmArs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border_white"
+                    android:padding="0dp">
+
+                    <Button
+                        android:id="@+id/btnSmsAuth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_black_left_selector"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/btn_sms_auth"
+                        android:textColor="@color/text_color_btn_black"
+                        android:textSize="@dimen/button_text_size" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="#CDCDCD" />
+
+                    <Button
+
+
+                        android:id="@+id/btnArsAuth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_black_right_selector"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/btn_ars_auth"
+                        android:textColor="@color/text_color_btn_black"
+                        android:textSize="@dimen/button_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 등록 버튼 -->
+            <include
+                layout="@layout/c_btn_fill_navy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

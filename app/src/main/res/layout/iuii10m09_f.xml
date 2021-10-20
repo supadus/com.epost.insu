@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+보험금청구 > 본인청구 > 9단계. 보험금청구신청완료
+보험금청구 > 자녀청구 > 9단계. 보험금청구신청완료
+
+* 01       2019-12-24    노지민     : 보험금청구 완료단계에 사고일자, 진단명 추가
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- IUII40M00 보험금청구 완료 -->
+            <LinearLayout
+
+                android:id="@+id/linResultOk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_default_padding">
+
+
+
+
+                <LinearLayout
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/label_tobig_size_20"
+                        android:textColor="@color/colorText_11"
+                        android:text="09"/>
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/label_tobig_size_20"
+                        android:textColor="@color/colorText_10"
+                        android:text="@string/label_req_step_9"
+                        />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/layout_default_padding">
+
+                    <ImageView
+                        android:layout_width="55.14dp"
+                        android:layout_height="55.14dp"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/desc_img_complete_reqpay"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_complete_req" />
+
+                    <TextView
+                        android:id="@+id/textReqComplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorText_8"
+                        android:textSize="@dimen/label_default_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f7f7f7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <!-- 접수번호 -->
+                <include
+                    android:id="@+id/labelTextNumber"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 접수일자 -->
+                <include
+                    android:id="@+id/labelTextDate"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 접수센터 -->
+                <include
+                    android:id="@+id/labelTextCenter"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 접수자 -->
+                <include
+                    android:id="@+id/labelTextPersonInCharge"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 센터 전화번호 -->
+                <include
+                    android:id="@+id/labelTextCenterPhone"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 청구자 -->
+                <include
+                    android:id="@+id/labelTextReqName"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 청구유형 -->
+                <include
+                    android:id="@+id/labelTextReqCategory"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 발생원인 -->
+                <include
+                    android:id="@+id/labelTextReqReason"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 청구사유 -->
+                <include
+                    android:id="@+id/labelTextReqType"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 진단명 //2019-12-26 추가 -->
+                <include
+                    android:id="@+id/labelTextReqDignNm"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 사고일자 //2019-12-24 추가 -->
+                <include
+                    android:id="@+id/labelTextReqReasonDate"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 사고장소 //2019-12-17 추가 -->
+                <include
+                    android:id="@+id/labelTextReqPlace"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 사고내용 //2019-12-17 추가 -->
+                <include
+                    android:id="@+id/labelTextReqCntt"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 보험처리예정일 -->
+                <include
+                    android:id="@+id/labelTextDueDate"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- 송금요청계좌정보 -->
+                <include
+                    android:id="@+id/labelTextBankInfo"
+                    layout="@layout/layout_label_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!-- 보험금청구절차안내 버튼 -->
+            <include
+                android:id="@+id/btnGuideProcess"
+                layout="@layout/c_btn_fill_navy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- IUII41M00 보험금청구 오류 -->
+        <LinearLayout
+            android:id="@+id/linResultFail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="150.57dp"
+                android:layout_height="150.57dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="29dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/desc_img_fail_req"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_fail_req" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"
+                android:text="@string/label_fail_req"
+                android:textColor="@color/colorText_11"
+                android:textSize="@dimen/label_default_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="37.71dp"
+                android:gravity="center_horizontal"
+                android:text="@string/label_fail_req_retry"
+                android:textColor="@color/colorText_0"
+                android:textSize="@dimen/label_default_size" />
+
+            <include
+                android:id="@+id/btnRetry"
+                layout="@layout/c_btn_fill_navy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

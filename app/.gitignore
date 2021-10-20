@@ -1,0 +1,7 @@
+/build
+/.idea/
+/.idea/encodings.xml
+
+/debug/output.json
+/release/output.json
+/debug/app-debug.apk

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 공동인증 관리, 간편인증 관리에서 사용하는 메뉴 버튼 -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_w_r_selector"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingTop="@dimen/view_default_padding"
+    android:paddingBottom="@dimen/view_default_padding"
+    android:paddingLeft="35dp"
+    android:paddingRight="@dimen/layout_default_padding"
+    tools:ignore="RtlHardcoded" >
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_certificate_reg" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_big_size"
+            android:textColor="@color/colorText_0"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="20dp"
+            android:layout_marginLeft="15dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry"
+            tools:text="[내용표기]"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_next"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+</RelativeLayout>

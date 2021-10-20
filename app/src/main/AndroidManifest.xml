@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.epost.insu">
+
+    <!-- ###########################################################################################
+        퍼미션 설정
+    ################################################################################################-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 사진첩 -->
+
+
+    <!-- App Defence -->
+    <uses-permission android:name="READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- WEBVIEW(전화걸기) -->
+    <uses-feature android:name="android.hardware.telephony" android:required="false" /> <!-- 와이파이 탭버전 지원에 따른 전화기능 필터링 제거 -->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- XSign -->
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- mvaccine, PUSH -->
+
+    <!-- NJM_20191121 안드로이드Q 대응 추가(엠백신)-->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/> <!-- mvaccine(안드로이드Q에서 탐지결과를 헤드업노티로 띄우기 위해 사용) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- mvaccine(실시간감시) -->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" /> <!-- mvaccine -->
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- PUSH : NJM_20210201신규  -->
+    <uses-permission android:name="android.permission.VIBRATE"/> <!-- PUSH : NJM_20210201신규  -->
+
+    <!-- NJM_20210201 PUSH --> <!-- 안드로이드 8.0이상 필수  라이브러리 버전 4.1.0.7 이상부터 추가된 리시버 등록 시 권한 등록위해 선언(없으면 앱 디폴트 권한) -->
+    <permission android:name="com.epost.insu.permission.MPUSH_PERMISSION" android:protectionLevel="signature" />
+    <uses-permission android:name="com.epost.insu.permission.MPUSH_PERMISSION" />
+    <!-- <uses-permission android:name="android.permission.GET_TASKS" />--> <!-- deprecated 2020-02-25 주석처리 -->
+
+
+    <!--
+     * NJM_20200929 requestLegacyExternalStorage="true" 추가 : 안드로이드 API29 대응 (저장소권한 관련)
+     -->
+   <application
+       android:largeHeap="true"
+       android:name=".CustomApplication"
+       android:allowBackup="false"
+       android:requestLegacyExternalStorage="true"
+       android:usesCleartextTraffic="true"
+       android:icon="@mipmap/ic_launcher"
+       android:roundIcon="@mipmap/ic_launcher_round"
+       android:label="@string/main_app_name"
+       android:theme="@style/AppTheme"
+       android:fullBackupContent="false"
+       tools:replace="android:allowBackup,android:fullBackupContent,android:label" >
+       <uses-library
+           android:name="org.apache.http.legacy"
+           android:required="false" />
+
+       <!-- ###########################################################################################
+           액티비티 설정
+       ################################################################################################-->
+        <!-- 메인 액티비티 -->
+       <!--    android:label="@string/label_web_view"-->
+
+       <activity android:name=".activity.Activity_WebView"
+
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+
+           android:screenOrientation="portrait"  android:launchMode="singleTask" android:hardwareAccelerated="true" >
+
+       </activity>
+       <!-- NJM_20190206추가 -->
+
+
+        <activity
+            android:name=".activity.IUCOA0M00"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:theme="@style/IntroTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 웹 App 연계시 호출되는 Activity -->
+        <activity
+
+            android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:name=".activity.Activity_WebStart"       android:label="@string/main_app_name"   android:launchMode="singleTask" android:screenOrientation="portrait">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="reqCertLogin"    android:scheme="epostInsu" />
+                <data android:host="reqPinLogin"     android:scheme="epostInsu" />
+                <data android:host="reqFidoLogin"    android:scheme="epostInsu" />
+                <data android:host="reqPatternLogin" android:scheme="epostInsu" />
+                <data android:host="checkCert"      android:scheme="epostInsu" />
+                <data android:host="reqPinSign"     android:scheme="epostInsu" />
+                <data android:host="reqBioSign"     android:scheme="epostInsu" />
+                <data android:host="reqPatternSign" android:scheme="epostInsu" />
+                <data android:host="smartReqPay" android:scheme="epostInsu" />
+                <data android:host="reqPay"      android:scheme="epostInsu" />
+                <data android:host="reqChild"    android:scheme="epostInsu" />
+                <data android:host="reqSearch"   android:scheme="epostInsu" />
+                <data android:host="mngCert" android:scheme="epostInsu" /> <!-- 공동인증 관리 -->
+                <data android:host="mngFido" android:scheme="epostInsu" /> <!-- 간편인증 관리 -->
+                <data android:host="logOut" android:scheme="epostInsu" /> <!-- 로그아웃 -->
+            </intent-filter>
+
+
+       </activity>
+       <activity
+
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUCOG0M00"          android:label="@string/label_iucog0m00"                android:screenOrientation="portrait" />
+       <activity
+
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUCOG0M02"          android:label="@string/label_iucog0m02"         android:screenOrientation="portrait" />
+       <activity
+
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUCOG0M01"          android:label="@string/label_iucog0m01"                android:screenOrientation="portrait" />
+
+
+       <!-- 지급청구 ============================================================================ -->
+       <activity
+
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUII01M00"          android:label="@string/label_iuii01m00"              android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUII10M00_P"        android:label="@string/label_iuii10m00_p"       android:screenOrientation="portrait" android:launchMode="singleTask" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUII90M00_P"        android:label="@string/label_iuii90m00_p"       android:screenOrientation="portrait" android:launchMode="singleTask" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUII50M00_P"        android:label="@string/label_iuii50m00_p"          android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUII60M00"          android:label="@string/label_iuii60m00"      android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUII70M00"          android:label="@string/label_iuii70m00" android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUII10M00_S"        android:label="@string/label_iuii10m00_s"            android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUII21S01"          android:label="@string/label_iuii21s01"     android:screenOrientation="portrait" />
+
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUCOF0M00"          android:label="@string/label_iucof0m00"                android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUII31M00"          android:label="@string/label_iuii31m00"           android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.IUII33M00_P"        android:label="@string/label_iuii33m00_p"      android:screenOrientation="portrait" /> <!-- NJM_20190418 추가 -->
+
+       <!-- 인증센터 ============================================================================ -->
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC02M00"     android:label="@string/label_iupc02m00"     android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC03M00"     android:label="@string/label_iupc03m00"         android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUFC30M00"     android:label="@string/label_iupc30m00"           android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUFC31M00"     android:label="@string/label_iupc31m00"      android:screenOrientation="portrait" />
+       <activity
+
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUFC32M00"     android:label="@string/label_iupc32m00"      android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUFC33M00"     android:label="@string/label_iupc33m00"      android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUFC34M00"     android:label="@string/label_iupc34m00"     android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUFC39M00"     android:label="@string/label_iupc39m00" android:screenOrientation="portrait" android:launchMode="singleTask" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+       <!-- 인증/로그인 ========================================================================= -->
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUCOB0M00"     android:label="@string/label_iucob0m00"        android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUCOC2M00"     android:label="@string/label_iucoc2m00"  android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUCOC2M00_Web" android:label="@string/label_iucoc2m00"  android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUCOC0M00"     android:label="@string/label_iucoc0m00_1"       android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC80M00"     android:label="@string/label_iupc80m00"     android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUCOC0M00_Web" android:label="@string/label_iucoc0m00_web"   android:screenOrientation="portrait" android:launchMode="singleTask" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC80M10_Web" android:label="@string/label_iupc80m00_web" android:screenOrientation="portrait" android:launchMode="singleTask" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUCOC3M00"     android:label="@string/label_iucoc3m00"       android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC10M00"     android:label="@string/label_iupc10m00"       android:screenOrientation="unspecified"  android:theme="@style/Theme.Transparent" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC20M00"     android:label="@string/label_iupc20m00"       android:screenOrientation="unspecified"  android:theme="@style/Theme.Transparent" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUFC00M00"     android:label="@string/label_iufc00m00"           android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUFC00M09"     android:label="@string/label_iufc00m01"       android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUFC10M00"     android:label="@string/label_iufc10m00"           android:screenOrientation="unspecified" android:theme="@style/Theme.Transparent" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC90M00_P"   android:label="@string/label_iupc90m00" android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC95M00_P"   android:label="@string/label_iupc95m00"   android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC95M20"     android:label="@string/label_iupc95m00"   android:screenOrientation="unspecified" android:theme="@style/Theme.Transparent" /> <!-- 2회 이후 인증 -->
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC95M90"     android:label="@string/label_iupc95m00"   android:screenOrientation="unspecified" android:theme="@style/Theme.Transparent">  <!-- 카카오앱 실행 후 검증 -->
+           <intent-filter>
+               <action android:name="android.intent.action.VIEW" />
+               <category android:name="android.intent.category.DEFAULT" />
+               <category android:name="android.intent.category.BROWSABLE" />
+               <data android:host="kakaopay_auth" android:scheme="epostinsu" />
+           </intent-filter>
+       </activity>
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.auth.IUPC70M00"     android:label="@string/label_iupc70m00"      android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+
+       <!-- 푸시(PUSH) ========================================================================= -->
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.push.PushMessageActivity"     android:label="알림"      android:screenOrientation="portrait" android:theme="@style/Theme.Transparent" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.push.PushDetailActivity"      android:label="알림"      android:screenOrientation="portrait" />
+
+       <!-- 블럭체인 ============================================================================ -->
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.BC.IUBC01M00"   android:label="@string/label_iubc01m00" android:screenOrientation="portrait" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.BC.IUBC10M00_P" android:label="@string/label_iubc10m00_p"             android:screenOrientation="portrait" android:launchMode="singleTask" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+       <activity
+           android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+           android:name=".activity.BC.IUBC11M00"   android:label="@string/label_iubc11m00"                  android:screenOrientation="portrait"  android:launchMode="singleTask" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+       <!-- mVaccine Activity -->
+        <activity
+
+            android:configChanges="fontScale|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:name="com.TouchEn.mVaccine.b2b2c.activity.ScanActivity"
+            android:label="@string/mv_app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:ignore="InnerclassSeparator" />
+
+        <!-- 2019-11-21 라온시큐어 안드로이드Q대응에 따른 테마 변경 -->
+
+
+
+        <activity
+
+            android:name="com.TouchEn.mVaccine.b2b2c.activity.BackgroundScanActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+            android:label="@string/mv_mVaccineScanning"
+            android:screenOrientation="unspecified"
+            android:theme="@style/Theme.mVaccine.Transparent"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.TouchEn.mVaccine.b2b2c.activity.ResultLogActivity"
+            android:configChanges="fontScale|orientation|keyboard|screenSize|screenLayout|smallestScreenSize"
+            android:exported="false"
+            android:label="@string/mv_mVaccineScanning"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:ignore="InnerclassSeparator" />
+
+        <!-- 2019-11-21 라온시큐어 안드로이드Q대응에 따른 테마 변경 -->
+        <activity
+            android:name="com.TouchEn.mVaccine.b2b2c.activity.BackgroundScan"
+            android:label="@string/mv_app_name"
+            android:configChanges="fontScale|orientation|keyboard|screenSize|screenLayout|smallestScreenSize"
+            android:theme="@style/Theme.mVaccine.Transparent"
+            tools:ignore="InnerclassSeparator" />
+
+        <!-- 2019-08-08 BackgroundRootingCheck -> BgRtCheck :  액티비티명 변경 -->
+        <!-- 2019-11-21 라온시큐어 안드로이드Q대응에 따른 테마 변경 -->
+        <activity
+            android:name="com.TouchEn.mVaccine.b2b2c.activity.BgRtCheck"
+            android:configChanges="fontScale|orientation|keyboard|screenSize|screenLayout|smallestScreenSize"
+            android:label="@string/mv_app_name"
+            android:theme="@style/Theme.mVaccine.Transparent"
+            tools:ignore="InnerclassSeparator" />
+        <!-- END mVaccine Activity -->
+
+
+       <!-- ###########################################################################################
+           서비스 설정
+       ################################################################################################-->
+        <!-- Android 운영체제에서 엠백신 스레드 종료처리 방지용 서비스 추가 -->
+        <service
+            android:name="com.TouchEn.mVaccine.b2b2c.service.OnInstallService"
+            android:process=":remote"
+            tools:ignore="InnerclassSeparator" />
+
+        <!-- 2019-11-21. 엠백신 서비스 추가(안드로이드Q 대응 : 탐지결과 전송용) -->
+        <service android:name="com.TouchEn.mVaccine.b2b2c.service.DetectionResultSendService" android:process=":remote" />
+
+        <!-- 배너 이미지 다운로드 서비스 -->
+        <service android:name=".service.Service_ImageDown" />
+
+       <!-- PUSH : NJM_20210201삭제 : 유라클 모피어스로 대체 -->
+<!--
+        <service android:name=".fcm.FcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.FcmTokenListener">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+-->
+       <!-- JobScheduler 를 이용한 서비스 (5.1.x 버전 추가) -->
+       <service android:name="m.client.push.library.service.UPNSJobService" android:exported="false"> <!-- PUSH : NJM_20210201신규 -->
+           <intent-filter>
+               <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+           </intent-filter>
+       </service>
+       <!-- // JobScheduler 를 이용한 서비스 (5.1.x 버전 추가) -->
+
+       <service android:name="m.client.push.library.service.UPNSConnectService" android:exported="false"/>
+       <service android:name="m.client.push.library.service.FCMIntentService" android:exported="false"> <!-- PUSH : NJM_20210201신규 -->
+           <intent-filter>
+               <action android:name="com.google.firebase.MESSAGING_EVENT" />
+           </intent-filter>
+       </service>
+
+       <!-- FirebaseInstanceIdService performs security checks at runtime, no need for explicit permissions despite exported="true" -->
+       <service android:name="m.client.push.library.service.FCMInstanceIDListenerService" android:exported="true"> <!-- PUSH : NJM_20210201신규 -->
+           <intent-filter>
+               <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+           </intent-filter>
+       </service>
+
+       <receiver android:name=".push.receiver.MessageArrivedReceiver" > <!-- PUSH : NJM_20210201신규 -->
+           <intent-filter>
+               <action android:name="com.epost.insu.GCM_MESSAGE_ARRIVED" />
+               <action android:name="com.epost.insu.UPNS_MESSAGE_ARRIVED" />
+               <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+       </receiver>
+
+        <receiver android:name=".push.receiver.PushActionReceiver" > <!-- PUSH : NJM_20210201신규 -->
+           <intent-filter>
+               <action android:name="com.epost.insu.ACTION_COMPLETED" />
+               <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+        </receiver>
+
+        <receiver android:name="m.client.push.library.receiver.GcmActionReceiver"> <!-- PUSH : NJM_20210201신규 -->
+           <intent-filter>
+               <action android:name="com.epost.insu.ACTION_GCM" />
+               <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+        </receiver>
+
+        <!-- 카메라 이미지 촬영 파일 공유 provider (target API 24 대응) -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.epost.insu.capture"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+</manifest>

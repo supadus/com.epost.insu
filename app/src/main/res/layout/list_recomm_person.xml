@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@drawable/border_address"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/viewHolderCon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        tools:ignore="RtlHardcoded">
+
+        <!-- 추천국 명/주소 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:text="(추천인)"
+                android:textColor="@color/colorText_0"
+                android:textSize="@dimen/label_tobig_size"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <TextView
+                android:id="@+id/tv_remnNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="(추천인번호)"
+                android:textColor="@color/colorText_9"
+                android:textSize="@dimen/label_default_dp_size"
+                tools:ignore="SpUsage" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

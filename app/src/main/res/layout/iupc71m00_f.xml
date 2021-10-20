@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 인증 > 지문인증 > 휴대폰 인증번호 입력 확인 (화면 ID : IUPC71M00) - #59 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_default_padding">
+
+
+        <!-- 인증번호 입력 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/label_iupc91m00_f_title"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="-0.02"
+                android:textColor="#565656"
+                android:textSize="@dimen/label_default_dp_size"
+                android:textStyle="normal"
+                tools:text="SMS 인증번호 입력" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/edtitext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:hint="@string/hint_sms_code"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/colorText_0"
+                        android:textColorHint="#666666"
+                        android:textSize="@dimen/label_default_size"
+                        tools:ignore="RtlHardcoded" />
+
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/colorText_11"
+                        android:textSize="@dimen/label_small_size"
+                        tools:ignore="RtlHardcoded,RtlSymmetry"
+                        tools:text="02:45" />
+
+
+                </LinearLayout>
+
+
+                <!-- 휴대폰재인증 버튼 -->
+                <Button
+                    android:id="@+id/btnRetry"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+
+                    android:background="@drawable/btn_auth"
+                    android:text="@string/btn_sms_retry"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="82dp"
+                android:background="#aaaaaa" />
+
+
+            <!-- 라벨 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <include layout="@layout/view_dot" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guide_input_sms_code"
+                    android:textColor="@color/colorText_8"
+                    android:textSize="@dimen/label_small_size" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!-- 휴대폰재인증 | 확인 버튼 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+
+        <!-- 확인 버튼 -->
+        <Button
+            android:id="@+id/btnOk"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/btn_purple_noradius_selector"
+            android:text="@string/btn_ok"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/button_big_dp_size" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

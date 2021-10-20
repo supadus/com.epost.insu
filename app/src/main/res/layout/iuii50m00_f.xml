@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 보험금청구 > 보험금청구 > 보험금청구조회 (화면 ID : IUII50M00) -  #25 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 보험금청구 내역 목록 레이아웃 -->
+        <LinearLayout
+            android:id="@+id/linResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_0"
+                android:text="@string/guide_req_benefit_list"
+                android:paddingTop="@dimen/layout_default_padding"
+                android:paddingLeft="10dp"
+                android:paddingBottom="@dimen/layout_default_padding"
+                android:paddingRight="10dp"/>
+
+            <View
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#eeeeee"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="5dp"
+                android:listSelector="@android:color/transparent"
+                tools:listitem="@layout/list_req_benefit" />
+
+        </LinearLayout>
+
+        <!-- 보험금청구 내역 Empty 레이아웃 -->
+        <LinearLayout
+            android:id="@+id/linEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/layout_default_padding"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="150.57dp"
+                android:layout_height="150.57dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_empty_search"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/desc_img_empty_list"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_default_size"
+                android:textColor="@color/colorText_0"
+                android:text="@string/empty_req_benefit_list"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"/>
+
+            <include
+                layout="@layout/c_btn_fill_navy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

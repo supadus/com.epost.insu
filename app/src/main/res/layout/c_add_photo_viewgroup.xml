@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- AddPhotoViewGroup 에서 사용하는 사진 추가 ViewGroup-->
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- padding 값 변경시 AddPhotoViewGroup의 의 tmp_gridWidth 의 해당 마진값 적용 필요 -->
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/layout_default_padding">
+
+        <TextView
+            android:id="@+id/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_small_size"
+            android:textColor="@color/colorText_0"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <LinearLayout
+
+                android:background="@drawable/btn_g_g_selector"
+
+
+                android:id="@+id/linBtnAddPhoto"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingTop="5dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="5dp"
+
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/btn_add_photo"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/label_small_size" />
+
+                <ImageView
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="21dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_photo"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linBtnCamera"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="64dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/btn_g_g_selector"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingTop="5dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="5dp"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/btn_take_picture"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/label_small_size" />
+
+                <ImageView
+
+                    android:layout_width="21dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_camera"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#CDCDCD"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  >
+
+        <TextView
+            android:id="@+id/textEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center"
+            android:textSize="@dimen/label_default_size"
+            android:textColor="#666666"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:layout_margin="@dimen/layout_default_padding"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:id="@+id/linPhotoGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+
+        </HorizontalScrollView>
+
+
+        <!-- layout_marginLeft, layout_marginRight 값 변경시 AddPhotoViewGroup의 의 tmp_gridWidth 의 해당 마진값 적용 필요 -->
+        <GridLayout
+            android:id="@+id/gridPhotoGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+
+    </FrameLayout>
+
+</merge>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- TextView | TextView 로 구성된 레이아웃 , IUII51M00(보험금청구조회 상세 화면) 에서 사용 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="15dp"
+
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+
+
+
+    <TextView
+        tools:text="접수번호"
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/label_small_size"
+        android:textStyle="bold"
+        android:textColor="@color/colorText_9"
+        android:gravity="left"
+        android:paddingRight="5dp"
+        tools:ignore="DuplicateIncludedIds,RtlHardcoded" />
+
+
+    <TextView
+        android:layout_marginTop="3dp"
+        tools:text="202108201610334125133"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/label_tobig_size"
+        android:textColor="@color/colorText_10"
+        android:textColorHint="#666666"
+        tools:ignore="DuplicateIncludedIds" />
+
+</LinearLayout>

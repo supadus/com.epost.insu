@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths >
+    <external-files-path name="capture_images" path="Pictures/" />
+
+    <!-- pdf 공유 external-path : Environment.getExternalStorageDirectory() >> /storage/emulated/0 -->
+    <external-path name="download_pdf" path="Download/" />
+
+</paths>

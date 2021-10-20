@@ -1,0 +1,234 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:actionBarSize">@dimen/action_bar_size</item>  <!-- default 56 dp -->
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="IntroTheme" parent="@style/AppTheme">
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- API 26에서 죽는 현상 : Only fullscreen opaque activities can request orientation -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- BottomSheetDialog style-->
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Theme.Transparent</item>
+    </style>
+    <!--
+        <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+            <item name="android:background">@drawable/border_bottom_sheet</item>
+        </style>
+    -->
+
+    <style name="VaccineMiniTheme" parent="@style/AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <!--
+         API 26에서 죽는 현상 : Only fullscreen opaque activities can request orientation
+        -->
+        <!-- <item name="android:windowIsTranslucent">true</item>-->
+        <!-- Note that we use the base animation style here (that is no
+             animations) because we really have no idea how this kind of
+             activity will be used. -->
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <!-- mvaccine style -->
+    <style name="fontindex01">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex02">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">#ff888888</item>
+    </style>
+
+    <style name="fontindex03">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ffd6d6d6</item>
+    </style>
+
+    <style name="fontindex04">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex05">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex06">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex07">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ffd6d6d6</item>
+    </style>
+
+    <style name="fontindex08">
+        <item name="android:textSize">17.0dip</item>
+        <item name="android:textColor">#ffcccccc</item>
+    </style>
+
+    <style name="fontindex09">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">#ff333333</item>
+    </style>
+
+    <style name="fontindex10">
+        <item name="android:textSize">24.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex11">
+        <item name="android:textSize">22.0dip</item>
+        <item name="android:textColor">#ff888888</item>
+    </style>
+
+    <style name="fontindex12">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ffd6d6d6</item>
+    </style>
+
+    <style name="fontindex13">
+        <item name="android:textSize">24.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex14">
+        <item name="android:textSize">29.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex15">
+        <item name="android:textSize">19.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex16">
+        <item name="android:textSize">23.0dip</item>
+        <item name="android:textColor">#ffd6d6d6</item>
+    </style>
+
+    <style name="fontindex17">
+        <item name="android:textSize">22.0dip</item>
+        <item name="android:textColor">#ff333333</item>
+    </style>
+
+    <style name="fontindex18">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff888888</item>
+    </style>
+
+    <style name="fontindex19">
+        <item name="android:textSize">23.0dip</item>
+        <item name="android:textColor">#ff888888</item>
+    </style>
+
+    <style name="fontindex20">
+        <item name="android:textSize">17.0dip</item>
+        <item name="android:textColor">#ff333333</item>
+    </style>
+
+    <style name="fontindex21">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex22">
+        <item name="android:textSize">22.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex23">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ffc6e4ff</item>
+    </style>
+
+    <style name="fontindex24">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex25">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ffd34545</item>
+    </style>
+
+    <style name="fontindex26">
+        <item name="android:textSize">17.0dip</item>
+        <item name="android:textColor">#ffacd8ff</item>
+    </style>
+
+    <style name="fontindex27">
+        <item name="android:textSize">21.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontindex28">
+        <item name="android:textSize">24.0dip</item>
+        <item name="android:textColor">#ffd34545</item>
+    </style>
+
+    <style name="fontindex29">
+        <item name="android:textSize">7.0dip</item>
+        <item name="android:textColor">#ffc8d7e3</item>
+    </style>
+
+    <style name="fontindex30">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ffc8d7e3</item>
+    </style>
+
+    <style name="alert_dialog_theme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.mVaccine.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Theme.mVaccine.Transparent2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Theme.mVaccine.NoTitleBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

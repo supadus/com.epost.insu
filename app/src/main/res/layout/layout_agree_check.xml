@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 휴대폰 본인인증 약관동의 화면에서 사용하는 약관 동의 컨트롤 레이아웃 -->
+<!-- LinearLayout horizontal 스타일로 Button TextView CheckBox 구성 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp"
+    >
+
+    <com.epost.insu.control.CustomCheckView
+        android:id="@+id/checkAgree"
+        android:layout_width="@dimen/check_view_size"
+        android:layout_height="@dimen/check_view_size"
+        android:layout_marginRight="10dp"
+        tools:ignore="RtlHardcoded" />
+
+    <LinearLayout
+        android:id="@+id/btn_line"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:textSize="@dimen/label_big_dp_size"
+            android:textColor="@color/colorText_10"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="center_vertical"
+            tools:ignore="DuplicateIncludedIds,RtlHardcoded" />
+
+
+        <ImageView
+            android:scaleType="center"
+            android:src="@drawable/btn_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

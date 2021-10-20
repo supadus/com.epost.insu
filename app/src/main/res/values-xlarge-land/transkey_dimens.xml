@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+	<dimen name="label_margin_top">8dip</dimen>    
+	<dimen name="label_margin_left">16dip</dimen>    
+	<dimen name="label_font_size">35sp</dimen>    
+	
+	<dimen name="edit_height">100dip</dimen>    
+	<dimen name="edit_margin_top">60dip</dimen>    
+	<dimen name="edit_margin_left">10dip</dimen>    
+	<dimen name="edit_margin_right">10dip</dimen>    
+
+	<dimen name="done_margin_top">8dip</dimen>    
+	<dimen name="done_margin_left">8dip</dimen>    
+
+	<dimen name="cancel_margin_left">8dip</dimen>    
+
+	<dimen name="entry_height">78dip</dimen>    
+	<dimen name="entry_font_size">28sp</dimen>    
+
+	<dimen name="clearall_margin_right">16dip</dimen>    
+
+	<dimen name="keyscroll_margin_left">8dip</dimen>    
+	<dimen name="keyscroll_margin_right">88dip</dimen>    
+	
+	<dimen name="popover_number_default">150px</dimen>
+	<dimen name="popover_qwerty_default">350px</dimen>
+	
+	<dimen name="dialog_number_default">150px</dimen>
+	<dimen name="dialog_qwerty_default">350px</dimen>
+	
+</resources>

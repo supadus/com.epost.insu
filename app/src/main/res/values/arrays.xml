@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 통신사 목록 -->
+    <string-array name="telecom">
+        <item>SKT</item>
+        <item>KT</item>
+        <item>LGT</item>
+        <item>SKT 알뜰폰</item>
+        <item>KT 알뜰폰</item>
+        <item>LGT 알뜰폰</item>
+    </string-array>
+
+    <!-- 통신사 코드 목록 -->
+    <string-array name="telectom_code">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+
+    </string-array>
+</resources>

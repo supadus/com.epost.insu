@@ -1,0 +1,1886 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    * 보험금청구 > 보험금청구 > 보험금청구시 구비서류 (화면 ID : IUII70M00) - #28
+    * 2019-09-11    노지민     : 입원급부금 추가
+    * 2019-12-23    노지민     : 구비서류 치아보험 추가
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="ContentDescription" >
+
+    <!-- 타이틀바 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+
+            android:padding="@dimen/layout_default_padding"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:text="@string/label_iuii70m00_title"
+                tools:text="@string/label_iuii70m00_title"/>
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#565656"
+                android:text="@string/label_iuii70m00_subtitle"
+                tools:text="@string/label_iuii70m00_subtitle"/>
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f7f7f7">
+        </View>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border_g_g"
+                android:padding="0.5dp">
+
+                <!-- 재해사고 증명서류(우선순위 참조)_____________________________________________-->
+                <RelativeLayout
+                    android:id="@+id/relDisasterDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_top_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_2"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_2_1"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_2_2"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_2_3"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_2_4"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_2_5"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_2_6"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_view_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- 사망보험금 청구서류__________________________________________________________-->
+                <RelativeLayout
+                    android:id="@+id/relDeathDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_0_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_3"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_3_1"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_3_2"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_3_3"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_3_4"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_view_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- 장해급부금 청구서류__________________________________________________________-->
+                <RelativeLayout
+                    android:id="@+id/relObstacleDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_0_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_4"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_4_1"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_4_2"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/label_small_size"
+                            android:textColor="@color/colorText_8"
+                            android:text="@string/guide_add_doc_4_3"
+                            android:layout_marginTop="5dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_view_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- 진단급부금 청구서류__________________________________________________________-->
+                <RelativeLayout
+                    android:id="@+id/relDiagnosisDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_0_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_5"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_5_1"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:id="@+id/textDoc_5_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_5_2"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/label_small_size"
+                            android:textColor="@color/colorText_7"
+                            android:text="@string/guide_add_doc_5_3"
+                            android:layout_marginTop="5dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/label_small_size"
+                            android:textColor="@color/colorText_7"
+                            android:text="@string/guide_add_doc_5_4"
+                            android:layout_marginTop="5dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_view_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- 입원급부금 청구서류__________________________________________________________-->
+                <RelativeLayout
+                    android:id="@+id/relEnterDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_0_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_12"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <!-- 단락 시작 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_12_1"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:id="@+id/textDoc_12_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_12_2"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_view_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- 수술급부금 청구서류__________________________________________________________-->
+                <RelativeLayout
+                    android:id="@+id/relSurgeryDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_0_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_6">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_6"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_6_1"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_6_2"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_view_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- 통원급부금 청구서류__________________________________________________________-->
+                <RelativeLayout
+                    android:gravity="center_vertical"
+                    android:id="@+id/relGoingHospitalDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_0_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_7">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_doc_list_7"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_7_1"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_view_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <!-- 우체국치아보험 청구서류__________________________________________________________-->
+                <RelativeLayout
+                    android:id="@+id/relToothInsulDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_0_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_7">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_13"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textDoc13_1"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_13_1"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_13_2"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_13_3"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_view_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <!-- 납입면제 안내_______________________________________________________________-->
+                <RelativeLayout
+                    android:id="@+id/relPayDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_0_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_8"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size"  />
+
+                    <ImageView
+                        android:id="@+id/img_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:id="@+id/textDoc8_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_8_1"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_8_2"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_8_3"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_view_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- 실손의료비보험 청구서류 안내__________________________________________________-->
+                <RelativeLayout
+                    android:id="@+id/relRealAccidentDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_0_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_9">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_9"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+               <LinearLayout
+                   android:id="@+id/linDoc_9"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:visibility="gone">
+
+                   <include
+                       layout="@layout/line_view_h"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:padding="10dp">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:layout_marginLeft="5dp"
+                           tools:ignore="RtlHardcoded">
+                           <FrameLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content">
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="@dimen/label_small_size"
+                                   android:text="가"
+                                   android:visibility="invisible"
+                                   tools:ignore="HardcodedText" />
+                               <ImageView
+                                   android:layout_width="@dimen/red_oval_dot_size"
+                                   android:layout_height="@dimen/red_oval_dot_size"
+                                   android:adjustViewBounds="true"
+                                   android:scaleType="fitXY"
+                                   android:src="@drawable/oval_navy"
+                                   android:layout_gravity="center"/>
+                           </FrameLayout>
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:textSize="@dimen/label_small_size"
+                               android:textColor="@color/colorText_8"
+                               android:text="@string/guide_add_doc_9_1"/>
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:layout_marginLeft="5dp"
+                           tools:ignore="RtlHardcoded">
+                           <FrameLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content">
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="@dimen/label_small_size"
+                                   android:text="가"
+                                   android:visibility="invisible"
+                                   tools:ignore="HardcodedText" />
+                               <ImageView
+                                   android:layout_width="@dimen/red_oval_dot_size"
+                                   android:layout_height="@dimen/red_oval_dot_size"
+                                   android:adjustViewBounds="true"
+                                   android:scaleType="fitXY"
+                                   android:src="@drawable/oval_navy"
+                                   android:layout_gravity="center"/>
+                           </FrameLayout>
+                           <TextView
+                               android:id="@+id/textDoc9_2"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:textSize="@dimen/label_small_size"
+                               android:textColor="@color/colorText_8"
+                               android:text="@string/guide_add_doc_9_2"/>
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:layout_marginLeft="5dp"
+                           tools:ignore="RtlHardcoded">
+                           <FrameLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content">
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="@dimen/label_small_size"
+                                   android:text="가"
+                                   android:visibility="invisible"
+                                   tools:ignore="HardcodedText" />
+                               <ImageView
+                                   android:layout_width="@dimen/red_oval_dot_size"
+                                   android:layout_height="@dimen/red_oval_dot_size"
+                                   android:adjustViewBounds="true"
+                                   android:scaleType="fitXY"
+                                   android:src="@drawable/oval_navy"
+                                   android:layout_gravity="center"/>
+                           </FrameLayout>
+
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:textSize="@dimen/label_small_size"
+                               android:textColor="@color/colorText_8"
+                               android:text="@string/guide_add_doc_9_3"/>
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:layout_marginLeft="5dp"
+                           tools:ignore="RtlHardcoded">
+                           <FrameLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content">
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="@dimen/label_small_size"
+                                   android:text="가"
+                                   android:visibility="invisible"
+                                   tools:ignore="HardcodedText" />
+                               <ImageView
+                                   android:layout_width="@dimen/red_oval_dot_size"
+                                   android:layout_height="@dimen/red_oval_dot_size"
+                                   android:adjustViewBounds="true"
+                                   android:scaleType="fitXY"
+                                   android:src="@drawable/oval_navy"
+                                   android:layout_gravity="center"/>
+                           </FrameLayout>
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:textSize="@dimen/label_small_size"
+                               android:textColor="@color/colorText_8"
+                               android:text="@string/guide_add_doc_9_4"/>
+                       </LinearLayout>
+                   </LinearLayout>
+               </LinearLayout>
+
+               <include
+                   layout="@layout/line_view_h"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <!-- 단체보장보험 청구서류_________________________________________________________-->
+                <RelativeLayout
+                    android:id="@+id/relGroupDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/btn_w_g_0_selector"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_expand_doc_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_10"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_10_1"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_10_2"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_view_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- 구비서류 유의사항____________________________________________________________-->
+
+                <RelativeLayout
+                    android:id="@+id/relMatterDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_w_g_bottom_selector"
+                    android:clickable="true"
+                    android:contentDescription="@string/desc_expand_doc_11"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/btn_doc_list_11"
+                        android:textColor="@color/colorText_10"
+                        android:textSize="@dimen/label_big_size" />
+
+                    <ImageView
+                        android:id="@+id/img_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/accordian"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDoc_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <include
+                        layout="@layout/line_view_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_11_1"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_11_2"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_11_3"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            tools:ignore="RtlHardcoded">
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:text="가"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+                                <ImageView
+                                    android:layout_width="@dimen/red_oval_dot_size"
+                                    android:layout_height="@dimen/red_oval_dot_size"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/oval_navy"
+                                    android:layout_gravity="center"/>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/label_small_size"
+                                android:textColor="@color/colorText_8"
+                                android:text="@string/guide_add_doc_11_4"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

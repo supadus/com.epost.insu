@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomPhotoView">
+        <attr name="preView" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="AddPhotoViewGroup">
+        <attr name="label" format="string"/>
+        <attr name="hint" format="string"/>
+        <attr name="desc_btn_1" format="string"/>
+        <attr name="desc_btn_2" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="fragmentKeyGuard">
+        <attr name="keyMode" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomCheckView">
+        <attr name="flagChecked" format="boolean"/>
+        <attr name="flagUseAnim" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="StepIndicator">
+        <attr name="stepCount" format="integer" />
+        <attr name="selectedIndex" format="integer"/>
+        <attr name="bgSelected" format="integer"/>
+        <attr name="bgNormal" format="integer"/>
+        <attr name="lineColor" format="color" />
+        <attr name="lineThick" format="dimension"/>
+        <attr name="stepSize" format="dimension"/>
+        <attr name="numberColor" format="color" />
+        <attr name="numberColorNonSelected" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="OnOffControl">
+        <attr name="onText" format="string"/>
+        <attr name="offText" format="string"/>
+        <attr name="onTextSize" format="integer"/>
+        <attr name="offTextSize" format="integer"/>
+        <attr name="onTextColor" format="color"/>
+        <attr name="offTextColor" format="color"/>
+        <attr name="width" format="dimension"/>
+        <attr name="height" format="dimension"/>
+        <attr name="flagOn" format="boolean"/>
+        <attr name="animDuration" format="integer"/>
+    </declare-styleable>
+
+    <!-- RatioView 속성 -->
+    <declare-styleable name="RatioView">
+        <attr name="ratioWidth" format="integer"/>
+        <attr name="ratioHeight" format="integer"/>
+        <attr name="flagStandWidth" format="boolean"/>
+    </declare-styleable>
+
+
+    <!-- mVaccine 관련 attr -->
+    <declare-styleable name="ProgressWheel">
+        <attr name="mv_pw_text" format="string" />
+        <attr name="mv_pw_textColor" format="color" />
+        <attr name="mv_pw_textSize" format="dimension" />
+        <attr name="mv_pw_barColor" format="color" />
+        <attr name="mv_pw_rimColor" format="color" />
+        <attr name="mv_pw_rimWidth" format="dimension" />
+        <attr name="mv_pw_spinSpeed" format="dimension" />
+        <attr name="mv_pw_delayMillis" format="integer" />
+        <attr name="mv_pw_circleColor" format="color" />
+        <attr name="mv_pw_radius" format="dimension" />
+        <attr name="mv_pw_barWidth" format="dimension" />
+        <attr name="mv_pw_barLength" format="dimension" />
+        <attr name="mv_pw_contourColor" format="color"/>
+        <attr name="mv_pw_contourSize" format="dimension"/>
+    </declare-styleable>
+
+</resources>

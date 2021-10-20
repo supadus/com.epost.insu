@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 인증 > 인증서가져오기 > 인증서가져오기 (화면 ID : IUPC02M00) - #30 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/layout_default_padding">
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_pc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <ImageView
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/ic_pc_mo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_mo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border_white"
+                android:paddingTop="15dp"
+                android:paddingLeft="7.5dp"
+                android:paddingRight="7.5dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="@dimen/layout_default_padding">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_big_size"
+                    android:text="@string/label_cert_number"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/activity_getCert_textNumber_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:textSize="@dimen/label_big_size"
+                        android:textColor="@color/colorText_0"
+                        android:textStyle="bold"
+                        android:background="@drawable/border_bottom_grey"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:id="@+id/activity_getCert_textNumber_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:textSize="@dimen/label_big_size"
+                        android:textColor="@color/colorText_0"
+                        android:textStyle="bold"
+                        android:background="@drawable/border_bottom_grey"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:id="@+id/activity_getCert_textNumber_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:textSize="@dimen/label_big_size"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorText_0"
+                        android:background="@drawable/border_bottom_grey"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_tobig_size"
+                android:textColor="@color/colorText_0"
+                android:text="@string/guide_get_cert_step"
+                android:layout_marginTop="@dimen/layout_default_padding"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorText_6"
+                        android:text="1"
+                        android:background="@drawable/oval_black"
+                        android:layout_gravity="center_vertical"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/label_small_size"
+                        android:textColor="@color/colorText_10"
+                        android:textStyle="bold"
+                        android:text="@string/guide_get_cert_step_1"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_small_size"
+                    android:textColor="@color/colorText_8"
+                    android:text="@string/guide_get_cert_step_1_desc"
+                    android:layout_marginLeft="25dp"
+                    android:autoLink="web"
+                    android:textColorLink="@color/colorText_0"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorText_6"
+                    android:text="2"
+                    android:background="@drawable/oval_black"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_small_size"
+                    android:textColor="@color/colorText_10"
+                    android:text="@string/guide_get_cert_step_2"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_small_size"
+                android:textColor="@color/colorText_8"
+                android:text="@string/guide_get_cert_step_2_desc"
+                android:layout_marginLeft="25dp"
+                android:autoLink="web"
+                tools:ignore="RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorText_6"
+                    android:text="3"
+                    android:background="@drawable/oval_black"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_small_size"
+                    android:textColor="@color/colorText_10"
+                    android:text="@string/guide_get_cert_step_3"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_small_size"
+                android:textColor="@color/colorText_8"
+                android:text="@string/guide_get_cert_step_3_desc"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="10dp"
+                android:autoLink="web"
+                tools:ignore="RtlHardcoded" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <include
+        layout="@layout/c_btn_fill_navy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ 보험금청구 > 자녀보험금청구 > 보험금청구접수신청
+ * 1.5.2    NJM_20210319    [임시개발 로그인 기능 추가] 임시로그인 삭제
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- 타이틀 레이아웃 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 컨텐츠 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    style="?attr/borderlessButtonStyle">
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/Toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:contentScrim="@android:color/transparent"
+                        app:layout_scrollFlags="scroll|snap|enterAlways"
+                        >
+
+                        <!-- 키패드 사용시 height 60dp 고정이였으나 키패드 사용 안하게되어 wrap_content로 변경하였음 -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp">
+
+                            <com.epost.insu.control.StepIndicator
+                                android:id="@+id/activity_req_indicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center"
+                                app:stepCount="8"
+                                app:stepSize="25dp"
+                                app:bgSelected="@drawable/oval_yellow"
+                                app:bgNormal="@drawable/oval_white"
+                                app:lineThick="1dp"
+                                app:lineColor="#1d365e" />
+                        </FrameLayout>
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <com.epost.insu.common.CustomViewPager
+                    android:id="@+id/activity_req_viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

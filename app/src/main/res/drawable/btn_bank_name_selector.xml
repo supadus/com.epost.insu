@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 보험금청구신청 > 계좌정보확인의 금융기관 선택 버튼 bg selector-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@drawable/btn_bank_name_clicked"/>
+    <item android:drawable="@android:color/transparent"/>
+</selector>

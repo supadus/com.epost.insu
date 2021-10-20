@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 공통으로 사용하는 버튼 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <Button
+        android:id="@+id/btnFillRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_navy_selector"
+        android:padding="15dp"
+        android:textSize="@dimen/button_text_size"
+        tools:text="확인"
+        android:textColor="#FFFFFF"
+        style="?attr/borderlessButtonStyle"/>
+</RelativeLayout>

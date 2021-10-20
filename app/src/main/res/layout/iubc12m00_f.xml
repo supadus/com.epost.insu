@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    보험금청구 > 보험금청구 > 보험청구서작성(개인정보) (화면 ID : IUBC10M00)
+
+    * 01       2020-02-13    노지민     : 필수사항 라벨, 선택사항 라벨, 직장 하시는일 레이아웃 gone
+ -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_default_padding">
+
+
+        <LinearLayout
+
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_11"
+                android:text="03"/>
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_10"
+                android:text="@string/label_smartreq_step_3"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border_white"
+            android:layout_marginTop="10dp"
+            >
+
+            <!-- 이름 -->
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_default_size"
+                android:textColor="@color/colorText_0"
+                android:paddingLeft="@dimen/layout_default_padding"
+                android:paddingRight="@dimen/layout_default_padding"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#CDCDCD"/>
+
+            <!-- 주민번호 -->
+            <TextView
+                android:id="@+id/textResidentNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_default_size"
+                android:textColor="@color/colorText_0"
+                android:paddingLeft="@dimen/layout_default_padding"
+                android:paddingRight="@dimen/layout_default_padding"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                />
+
+
+
+        </LinearLayout>
+
+        <!-- 필수사항 라벨 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_default_size"
+            android:textColor="@color/colorText_7"
+            android:text="@string/label_essential"
+            android:layout_marginTop="10dp"/>
+
+        <!-- 필수사항 입력 ViewGroup -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:paddingLeft="@dimen/layout_default_padding"
+                    android:paddingRight="@dimen/layout_default_padding"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/label_default_size"
+                    android:textColor="@color/colorText_0"
+                    android:hint="@string/hint_mobile"
+                    android:textColorHint="@color/colorHint"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:focusableInTouchMode="false"/>
+
+                <ImageButton
+                    android:id="@+id/btnMod"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_modify"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:padding="10dp"
+                    android:contentDescription="@string/desc_mod_mobile"
+                    android:layout_marginRight="10dp"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#CDCDCD"/>
+
+            <!-- SMS 알림 동의 레이아웃 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/layout_default_padding"
+                android:paddingRight="15dp"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:id="@+id/textLabelSMS"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/label_default_size"
+                    android:textColor="@color/colorText_0"
+                    android:text="@string/label_flag_agree_notify"
+                    android:contentDescription="@string/desc_sms_agree_no"/>
+
+                <com.epost.insu.control.SwitchingControl
+                    android:id="@+id/switchingNoti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- 주소 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border_white"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_default_size"
+                    android:textColor="@color/colorText_0"
+                    android:text="@string/label_addr"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/layout_default_padding"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/linBtnSearchAddr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:background="@drawable/btn_g_g_selector"
+                    android:contentDescription="@string/desc_search_addr"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/label_small_size"
+                        android:textColor="@color/colorHint"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/btn_search_addr" />
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_search"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#CDCDCD"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:textSize="@dimen/label_default_size"
+                android:textColor="@color/colorText_0"
+                android:paddingTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"/>
+
+        </LinearLayout>
+
+        <!-- 선택사항 라벨 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_default_size"
+            android:textColor="#4B4B4B"
+            android:text="@string/label_choice"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+
+        <!-- 직장 하시는일 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border_white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edtCompany"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="@dimen/label_default_size"
+                android:textColor="@color/colorText_0"
+                android:hint="@string/label_company_name"
+                android:inputType="text"
+                android:privateImeOptions="defaultInputmode=korean"
+                android:background="@android:color/transparent"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColorHint="@color/colorHint"
+                android:focusableInTouchMode="false"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#CDCDCD"/>
+
+            <EditText
+                android:id="@+id/edtJob"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="@dimen/label_default_size"
+                android:textColor="@color/colorText_0"
+                android:hint="@string/label_job"
+                android:inputType="text"
+                android:privateImeOptions="defaultInputmode=korean"
+                android:background="@android:color/transparent"
+                android:paddingLeft="@dimen/layout_default_padding"
+                android:paddingRight="@dimen/layout_default_padding"
+                android:textColorHint="@color/colorHint"
+                android:imeOptions="actionDone"
+                android:focusableInTouchMode="false"
+                />
+
+        </LinearLayout>
+
+
+        <include
+            layout="@layout/c_btn_fill_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

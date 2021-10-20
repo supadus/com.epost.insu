@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 인증센터 > 간편인증 > 간편인증서비스안내 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 타이틀 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 간편인증 서비스 소개 -->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_default_padding">
+
+
+                <TextView
+                    android:id="@+id/title_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_iufc30m00_title1"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/guide_manage_bio"
+                    android:textColor="@color/colorText_8"
+                    android:textSize="@dimen/label_small_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f7f7f7"></View>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_default_padding">
+                <!-- 서비스내용 라벨 -->
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/label_service_content"
+                    android:textColor="@color/colorText_10"
+                    android:textSize="@dimen/label_tobig_size_20" />
+
+
+                <!-- 이용가능 앱 라벨 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_target_app"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_big_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/guide_service_app_list"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_small_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 이용가능서비스 라벨 -->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_target_service"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_small_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/guide_service_service_list"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_small_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 서비스 이용방법 -->
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/label_service_process"
+                    android:textColor="@color/colorText_10"
+                    android:textSize="@dimen/label_tobig_size_20" />
+
+
+                <!-- 이용대상 고객 라벨 -->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_target_user"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_big_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/guide_service_finger_1"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_small_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 이용안내 라벨 -->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_how_join"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_big_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/guide_service_finger_join"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_small_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 이용 가능 스마트폰 라벨 -->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_available_device"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_big_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/guide_service_finger_device"
+                            android:textColor="@color/colorText_8"
+                            android:textSize="@dimen/label_small_size" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 공통 > 보험금청구 > 주소검색 & 주소검색 팝업_상세정보입력 (화면 ID : IUCOD2M00 , IUCOF0M01, IUCOF0M02) - #12, #13, #14 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 타이틀 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:padding="@dimen/layout_default_padding"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- 검색어 입력및 조회 레이아웃 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edt_search_addr"
+                >
+
+
+
+                <EditText
+                    android:id="@+id/edtSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textSize="@dimen/label_default_size"
+                    android:textColor="@color/colorText_0"
+                    android:layout_gravity="center_vertical"
+                    android:hint="@string/hint_search_addr"
+
+                    android:textColorHint="@color/colorHint"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"/>
+
+
+                <ImageButton
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/activity_search_addr_imgSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_search"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/desc_img_search"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"/>
+
+            </LinearLayout>
+
+            <!-- 주소검색 안내 -->
+            <LinearLayout
+                android:gravity="left"
+                android:id="@+id/linGuide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="left">
+
+
+
+                    <include layout="@layout/view_dot"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_search_addr_1"
+                        android:textColor="@color/colorText_7"
+                        android:textSize="@dimen/label_small_size"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guide_search_addr_2"
+                    android:textColor="@color/colorText_8"
+                    android:textSize="@dimen/label_small_size"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="left"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <!-- 구분선 -->
+        <include layout="@layout/view_line" />
+
+
+        <FrameLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/frameContents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 1. 조회 결과 empty 레이아웃 -->
+            <LinearLayout
+                android:id="@+id/linEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_big_size"
+                    android:textColor="@color/colorText_11"
+                    android:text="@string/label_empty_addr"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_default_size"
+                    android:textColor="@color/colorText_0"
+                    android:text="@string/guide_search_addr_3"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="15dp"/>
+
+            </LinearLayout>
+
+            <!-- 2. 조회 결과 출력 레이아웃 -->
+            <LinearLayout
+                android:id="@+id/linList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <ListView
+
+
+
+                    tools:listitem="@layout/list_address"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:id="@+id/activity_search_Addr_listVIew"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/white"
+                    android:dividerHeight="10dp"
+                    android:overScrollMode="never" />
+            </LinearLayout>
+
+            <!-- 3. 상세 주소 입력 -->
+            <ScrollView
+                android:visibility="gone"
+                android:id="@+id/scrResult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_white_rec"
+                        android:layout_marginBottom="10dp">
+
+                        <!-- 우편번호 -->
+                        <include
+                            android:id="@+id/labelTextZipNo"
+                            layout="@layout/layout_label_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <include
+                            layout="@layout/line_view_h"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <!-- 기본주소 -->
+                        <include
+                            android:id="@+id/labelTextAddr"
+                            layout="@layout/layout_label_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <include
+                            layout="@layout/line_view_h"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <!-- 상세주소 -->
+                        <include
+                            android:id="@+id/labelEditAddrDetail"
+                            layout="@layout/layout_label_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:ignore="DuplicateIncludedIds" />
+                    </LinearLayout>
+
+                    <!-- 닫기 버튼 -->
+                    <include
+                        layout="@layout/c_btn_fill_navy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

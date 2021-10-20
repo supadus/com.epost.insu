@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    CustomDialog 레이아웃
+
+    * 01       2020-02-17    노지민     : Triple버튼 Dialog 추가
+    * 02       2020-02-27    노지민     : Triple버튼 right버튼 글자수 길이에 따른 left버튼 높이 처리
+    * 03       2020-03-11    노지민     : 버튼 텍스트 고정사이즈로 변경
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_dlg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/layout_default_padding">
+
+            <TextView
+                android:id="@+id/textContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/colorText_8"
+                android:textSize="@dimen/label_big_size"
+
+                tools:ignore="RtlHardcoded"
+                tools:text="진행하실 업무를 선택하세요." />
+
+
+        </LinearLayout>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#edeeed" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLeft"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="?attr/selectableItemBackground"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorText_12"
+                android:textSize="@dimen/button_text_2_dp_size"
+
+                tools:text="보험료납입" />
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#edeeed" />
+
+            <Button
+                android:id="@+id/btnRight"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="?attr/selectableItemBackground"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorText_11"
+                android:textSize="@dimen/button_text_2_dp_size"
+
+                tools:text="실시간보험료납부"
+                tools:textColor="@color/colorText_11" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnBottom"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/colorText_12"
+            android:textSize="@dimen/button_text_2_dp_size"
+
+            tools:text="취소" />
+    </LinearLayout>
+</LinearLayout>

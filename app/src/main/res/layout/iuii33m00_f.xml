@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 보험금청구 > 보험금청구 > 추천국/추천인 선택 팝업 (화면 ID : IUII33M00) - # -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 타이틀 -->
+    <!--<include-->
+    <!--layout="@layout/layout_title_bar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"/>-->
+
+    <LinearLayout
+
+        android:id="@+id/linContent2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_default_padding">
+
+
+            <!-- 추천국 / 추천인 선택 TabView (사용안함:숨김처리)-->
+            <com.epost.insu.control.CustomTabView
+                android:id="@+id/customTabView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!-- 추천국 조회 Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edt_search_addr"
+                android:orientation="vertical">
+                <!--android:background="@drawable/border_white"-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <!-- 추천국 조회폼 -->
+                    <include
+                        android:id="@+id/labelEditSearchName"
+                        layout="@layout/layout_label_edittext_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <!-- 추천국 조회버튼 -->
+                    <ImageButton
+                        android:id="@+id/labelEditSearchNameBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_vertical"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/desc_img_search"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_search"
+                        tools:ignore="RtlSymmetry" />
+
+                </RelativeLayout>
+
+                <!-- 라인 -->
+                <!--            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#dadada"/>-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/view_line"  />
+        <!-- 목록 출력 Layout -->
+        <FrameLayout
+
+
+            android:id="@+id/fl_ListCon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <ListView
+
+                android:clipToPadding="false"
+                android:padding="20dp"
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/white"
+                android:dividerHeight="10dp"
+                android:listSelector="@android:color/transparent"
+
+                tools:listitem="@layout/list_recomm_depart" />
+            <!--
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="5dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3"
+                android:padding="5dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dp"
+                tools:listitem="@layout/list_recomm_depart" />
+                -->
+
+        </FrameLayout>
+
+        <!-- 목록 출력 Layout : NO DATA-->
+        <FrameLayout
+            android:id="@+id/fl_ListConNodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/label_recomm_nodata"
+                    android:textColor="@color/colorText_11"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/label_recomm_depart_nodata"
+                    android:textColor="@color/op_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

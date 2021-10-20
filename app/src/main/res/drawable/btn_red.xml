@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- red 버튼 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp"/>
+            <solid android:color="#ff4c4f"/>
+            <stroke android:width="2px" android:color="#dadada"/>
+            <padding android:bottom="5dp" android:right="5dp" android:top="5dp" android:left="5dp"/>
+        </shape>
+    </item>
+</layer-list>

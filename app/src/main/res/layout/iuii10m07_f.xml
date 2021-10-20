@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+보험금청구 > 본인청구 > 7단계. 계좌정보확인 및 추천국/추천인 선택
+보험금청구 > 자녀청구 > 7단계. 계좌정보확인 및 추천국/추천인 선택
+
+* 01       2019-05-29    노지민     : 본인/자녀 청구시 추천국/추천인 입력기능 신규
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 계좌정보 입력 컨텐츠 레이아웃 -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_default_padding">
+
+                <!-- 제목 -->
+
+
+                <LinearLayout
+
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/label_tobig_size_20"
+                        android:textColor="@color/colorText_11"
+                        android:text="07"/>
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/label_tobig_size_20"
+                        android:textColor="@color/colorText_10"
+                        android:text="@string/label_req_step_7"
+                        />
+
+                </LinearLayout>
+
+
+                <!-- 계좌정보확인 -->
+                <!-- 소제목 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/label_account_confirm"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/title_big_text_dp_size"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                <!-- 계좌정보확인 폼-->
+                <LinearLayout
+                    android:background="@drawable/border_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+
+
+                    <!-- 금융기관(은행명) -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <include
+                            android:id="@+id/labelTextBank"
+                            layout="@layout/layout_label_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_down"
+                            tools:ignore="ContentDescription,RtlHardcoded" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada" />
+
+                    <!-- 계좌번호 -->
+                    <include
+                        android:id="@+id/labelEditBankAccount"
+                        layout="@layout/layout_label_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!-- 계좌번호 리스트 -->
+                    <include
+                        android:id="@+id/labelSpinnerBankAccountList"
+                        layout="@layout/layout_label_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada" />
+
+                    <!-- 예금주 -->
+                    <include
+                        android:id="@+id/labelTextName"
+                        layout="@layout/layout_label_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="DuplicateIncludedIds" />
+                </LinearLayout>
+
+
+                <!-- 2019-05-29 추천국/추천인 -->
+                <!-- 소제목 -->
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/label_recommend"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/title_big_text_dp_size"
+
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:letterSpacing="-0.02"
+                        android:textColor="#084ebc"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        android:text="선택" />
+
+
+                </LinearLayout>
+
+
+                <!-- 추천국/추천인 입력폼 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/border_white"
+                    android:orientation="vertical">
+
+                    <!-- 추천국 -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include
+                            android:id="@+id/labelTextRecommendDepartment"
+                            layout="@layout/layout_label_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_down"
+                            tools:ignore="ContentDescription,RtlHardcoded" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada" />
+
+                    <!-- 추천인 -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include
+                            android:id="@+id/labelTextRecommendPerson"
+                            layout="@layout/layout_label_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_down"
+                            tools:ignore="ContentDescription,RtlHardcoded" />
+                    </FrameLayout>
+
+                </LinearLayout>
+                <!-- //2019-05-29 추천국/추천인 입력폼 -->
+
+                <include
+                    layout="@layout/c_btn_fill_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</FrameLayout>
+

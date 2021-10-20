@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mvaccineResultLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="9"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="singleChoice"
+        android:divider="#ffffff"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:scrollingCache="true" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/smartmedicButtonCure"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/mvaccine_button_shape2"
+                        android:text="@string/mv_delete"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/smartmedicButtonClose"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/mvaccine_button_shape3"
+                        android:text="@string/mv_close"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff" />
+
+                </FrameLayout>
+            </LinearLayout>
+    
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Fragment_Certificate(공동인증서 목록) 레이아웃 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/layout_default_padding">
+
+    <TextView
+        android:id="@+id/fragment_certificate_labelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/label_default_size"
+        android:textColor="@color/colorText_0"
+        android:text="@string/guide_select_certificate"
+        android:focusable="true"
+        android:layout_marginBottom="15dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/list_certificate"
+
+        android:id="@+id/fragment_certificate_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:clipToPadding="false" />
+
+</LinearLayout>

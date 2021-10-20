@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/label_default_size"
+        android:background="@drawable/btn_default_selector"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/label_small_size"
+        android:textColor="@color/text_color_btn_purple"
+        android:background="@drawable/btn_default_selector"
+        style="?attr/borderlessButtonStyle">
+
+    </Button>
+
+</FrameLayout>
+
+

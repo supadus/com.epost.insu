@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 보험금청구 > 보험금청구 > 사진촬영 시 주의사항 (화면 ID : IUII21S01) - #17 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 타이틀 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/layout_default_padding"
+                android:paddingLeft="@dimen/layout_default_padding"
+                android:paddingRight="@dimen/layout_default_padding">
+
+                <!-- 메인 안내 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/title_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/label_tobig_size_24"
+                        android:textColor="#000000"
+                        android:letterSpacing="-0.02"
+                        android:text="@string/label_iuii21s01_title"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_camera"
+                        android:textColor="@color/colorText_8"
+                        android:textSize="@dimen/label_small_size"
+                        android:layout_marginTop="@dimen/layout_default_padding"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="10dp"
+                    android:background="#f7f7f7"/>
+
+
+                <LinearLayout
+                    android:padding="@dimen/layout_default_padding"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <!-- 올바른 촬영 예시 라벨 -->
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="GOOD"
+                            android:textSize="@dimen/label_small_dp_size"
+                            android:layout_width="57dp"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/border_good"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/desc_img_good"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/label_tobig_size_20"
+                            android:textColor="@color/colorText_0"
+                            android:text="@string/label_good_photo"
+                            android:paddingLeft="5dp"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+                    </LinearLayout>
+                    <!-- 올바른 촬영 예시 샘플 이미지 -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/example_good_photo"
+                        android:contentDescription="@string/desc_img_good_sample"
+                        android:layout_marginTop="10dp"/>
+
+
+                    <!-- 잘못한 촬영 예시 라벨 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp">
+
+
+                        <TextView
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="BAD"
+                            android:textSize="@dimen/label_small_dp_size"
+                            android:layout_width="57dp"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/border_bad"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/desc_img_bad"/>
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/label_tobig_size_20"
+                            android:textColor="@color/colorText_0"
+                            android:text="@string/label_bad_photo"
+                            android:paddingLeft="5dp"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#bdbdbd"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <!-- 잘못된 촬영 예시 샘플 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- 가로 1열 샘플 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/linBadSample_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical"
+                                android:contentDescription="@string/desc_img_bad_sample_1">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/example_bad_photo_1"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:textColor="@color/colorText_0"
+                                    android:text="@string/label_bad_photo_1"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"/>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="1dp"
+                                android:background="@android:color/transparent"/>
+
+                            <LinearLayout
+                                android:id="@+id/linBadSample_2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical"
+                                android:contentDescription="@string/desc_img_bad_sample_2">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/example_bad_photo_2"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:textColor="@color/colorText_0"
+                                    android:text="@string/label_bad_photo_2"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- 가로 2열 샘플 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight="1.0"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/linBadSample_3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical"
+                                android:contentDescription="@string/desc_img_bad_sample_3">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/example_bad_photo_3"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:textColor="@color/colorText_0"
+                                    android:text="@string/label_bad_photo_3"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"/>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="1dp"
+                                android:background="@android:color/transparent"/>
+
+                            <LinearLayout
+                                android:id="@+id/linBadSample_4"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical"
+                                android:contentDescription="@string/desc_img_bad_sample_4">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/example_bad_photo_4"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/label_small_size"
+                                    android:textColor="@color/colorText_0"
+                                    android:text="@string/label_bad_photo_4"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="#bdbdbd"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 사진촬영하기 버튼 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/c_btn_fill_navy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+
+    <!--2019-11-21 라온시큐어 엠백신 안드로이드Q 대응 추가 -->
+    <string name="mv_msg_rootingdbfail">mVaccine init failed. Can not run on rooted devcie.</string>
+    <string name="mv_msg_remote_connection_dected">Remote Access detected</string>
+    <string name="mv_msg_remote_connection_title">Remote Access </string>
+    <string name="mv_realtime_title">Realtime Scanning</string>
+    <string name="mv_realtime_message">Scanning Installed App on Realtime</string>
+    <string name="mv_malware_detect_headup_title">Malware detected</string>
+    <string name="mv_malware_detect_headup_message">Remove malware now</string>
+    <string name="mv_channel_discript_detect_malware">This is for Malware Detection</string>
+    <string name="mv_channel_discript_detect_mvaccine">This is for mVaccine Detection</string>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- AddPhotoViewGroup 에서 사용하는 포토뷰-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <!-- 사진 테두리 적용 위해 FrameLayout childView로 추가(CustomRatioImageView에 background 적용 후 padding 적용 하여도 테두리가 가려지는 현상이 있어 ViewGroup에 추가시킴)-->
+    <RelativeLayout
+        android:id="@+id/fraImgView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border_white_rec"
+        tools:ignore="RtlHardcoded">
+
+        <com.epost.insu.control.CustomRatioImageView
+            android:id="@+id/imgView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:ratioHeight="3"
+            app:ratioWidth="4"></com.epost.insu.control.CustomRatioImageView>
+
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:id="@+id/btnRemove"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_gravity="right"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:src="@drawable/btn_pic_del"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+</FrameLayout>

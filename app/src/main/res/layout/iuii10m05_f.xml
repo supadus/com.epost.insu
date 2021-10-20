@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+보험금청구 > 본인청구 > 5단계. 보험청구서작성(청구내용2)
+보험금청구 > 자녀청구 > 5단계. 보험청구서작성(청구내용2)
+* NJM_20210319 (청구공통) [청구 5단계 폰트 사이즈 수정]
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_default_padding">
+
+
+        <LinearLayout
+
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_11"
+                android:text="05"/>
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_tobig_size_20"
+                android:textColor="@color/colorText_10"
+                android:text="@string/label_req_step_5"
+                />
+
+        </LinearLayout>
+
+
+
+
+        <!-- 사고처리여부 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="5dp"
+            android:text="@string/label_flag_do"
+            android:textColor="#000000"
+            android:textSize="@dimen/title_big_text_dp_size"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 자동차보험 가입여부 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textLabelInsureCar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/desc_car_insure_no"
+                    android:gravity="left"
+                    android:text="@string/label_insure_car_n"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_small_size"
+
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <com.epost.insu.control.SwitchingControl
+                    android:id="@+id/switchingInsureCar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linInputCarInsure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#dadada" />
+
+                <!-- 자동차보험사명 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left"
+                        android:text="@string/label_insure_name"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/label_small_size"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="#D8D8D8" />
+
+                    <EditText
+                        android:id="@+id/edtCarInsure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_insure_company"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:privateImeOptions="defaultInputmode=korean"
+                        android:saveEnabled="false"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/label_small_size"
+                        tools:ignore="RtlHardcoded,RtlSymmetry,SpUsage" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- 산업재해보험 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textLabelIndustry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/desc_industry_insure_no"
+                    android:gravity="left"
+                    android:text="@string/label_industry_insure_n"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_small_size"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <com.epost.insu.control.SwitchingControl
+                    android:id="@+id/switchingInsureIndustry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+
+
+            <!-- 경찰서신고 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textLabelPolice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/desc_police_no"
+                    android:gravity="left"
+                    android:text="@string/label_call_police_n"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_small_size"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <com.epost.insu.control.SwitchingControl
+                    android:id="@+id/switchingPolice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+
+
+            <!-- 기타 -->
+            <LinearLayout
+                android:id="@+id/linOtherInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:text="@string/label_other"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_small_size"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <EditText
+                    android:id="@+id/edtOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:hint="@string/hint_other"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:minLines="3"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:privateImeOptions="defaultInputmode=korean"
+                    android:saveEnabled="false"
+                    android:textColor="@color/colorText_0"
+                    android:textColorHint="#666666"
+                    android:textSize="@dimen/label_small_size"
+                    tools:ignore="SpUsage" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- 타보험사 가입내용 -->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="5dp"
+            android:text="@string/label_flag_other_insure"
+            android:textColor="#000000"
+            android:textSize="@dimen/title_big_text_dp_size"
+
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        <!-- 타보험사 가입내용 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textLabelJoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/desc_other_join_no"
+                    android:gravity="left"
+                    android:text="@string/label_flag_join_n"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_small_size"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <com.epost.insu.control.SwitchingControl
+                    android:id="@+id/switchingJoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!-- 타보험사명 추가 레이아웃-->
+        <LinearLayout
+            android:id="@+id/linAddOtherInsure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#ff4c4f" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/linOtherInsureInput"
+                        layout="@layout/c_input_other_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/linAddOtherInsureMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnAddCompany_1"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_navy_selector"
+                    android:text="@string/btn_add_company"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/button_text_small_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 실손가입여부 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textLabelRealInsure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/desc_silson_no"
+                    android:gravity="left"
+                    android:text="@string/label_flag_real_insure_n"
+                    android:textColor="@color/colorText_9"
+                    android:textSize="@dimen/label_small_size"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <com.epost.insu.control.SwitchingControl
+                    android:id="@+id/switchingRealInsure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 실손가입 보험사명 추가 레이아웃-->
+        <LinearLayout
+            android:id="@+id/linAddRealInsure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#ff4c4f" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/linRealInsureInput"
+                        layout="@layout/c_input_other_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/linAddRealInsureMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnAddCompany_2"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_navy_selector"
+                    android:text="@string/btn_add_company"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/button_text_small_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <include
+                layout="@layout/c_btn_fill_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

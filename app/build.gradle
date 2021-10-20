@@ -1,0 +1,153 @@
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    compileOptions.encoding = "UTF-8"
+    compileOptions.sourceCompatibility = JavaVersion.VERSION_1_8
+    compileOptions.targetCompatibility = JavaVersion.VERSION_1_8
+    defaultConfig {
+        applicationId 'com.epost.insu'
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 65
+        versionName '1.6.4'
+        ndk.abiFilters 'armeabi', 'armeabi-v7a','arm64-v8a'
+        multiDexEnabled true
+        dexOptions {
+            javaMaxHeapSize "4g"
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file("postinsu.jks")
+            storePassword "postinsu12!@"
+            keyAlias "postinsu"
+            keyPassword "postinsu12!@"
+        }
+        debug {
+            storeFile file('postinsu.jks')
+            storePassword 'postinsu12!@'
+            keyPassword 'postinsu12!@'
+            keyAlias 'postinsu'
+        }
+    }
+
+    buildTypes {
+        release {
+            // 프로가드 활성화
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-debug.pro'
+        }
+    }
+
+//    buildFeatures {
+//        viewBinding true
+//    }
+
+    productFlavors {
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    // implementation fileTree(dir: 'libs', include: ['*.jar'])
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // Google lib
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.2.0-rc02'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'                                           // 이미지 라운딩(하단팝업공지)
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'org.androidannotations:androidannotations-api:4.6.0'                            // 2020-01-07 신규
+    annotationProcessor "org.androidannotations:androidannotations:4.6.0"                           // 2020-01-07 신규
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // 솔루션 lib
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // -- FIDO2.0
+    //TODO--------------------------------배포시 개발/운영 확인 필--------------------------------------------------
+
+    // 개발용
+
+   implementation files('libs/FIDO2/KA_authenticator_v1.2.2_debug.aar')                            //20201217 신규
+   implementation files('libs/FIDO2/KFTC_FIDO_LIGHT_TEST_DEBUG_1.9__NO_MTK_20200917.aar')          //20201217 신규
+
+
+
+    // 운영용
+
+    /*
+    implementation files('libs/FIDO2/KA_authenticator_v1.2.2_release.aar')                          //20201217 신규
+    implementation files('libs/FIDO2/KFTC_FIDO_LIGHT_TEST_RELEASE_1.9__NO_MTK_20200917.aar')        //20201217 신규
+    */
+    //TODO---------------------------------------------------------------------------------------------------------
+
+
+    // -- 서류첨부(사진촬영&갤러리&편집) : 일루텍
+    implementation files('libs/1LLOOTECH/camera.aar')                                               //20201030 신규
+    implementation files('libs/1LLOOTECH/openCVLibrary342-release.aar')                             //20201030 신규
+    implementation files('libs/1LLOOTECH/PSMobile-1.04-release.aar')                                //20201030 신규
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'                                       //20201030 신규
+    implementation 'com.github.bumptech.glide:glide:4.11.0'                                         //20201030 신규
+
+    // -- PUSH : 유라클(모피어스)
+    implementation 'com.google.firebase:firebase-core:18.0.3'                                       // TODO : 업데이트 불가(에러 발생함)
+    implementation 'com.google.firebase:firebase-messaging:21.1.0'                                  // TODO : 업데이트 불가(에러 발생함)
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.6'
+    api files('libs/morpheus/morpheus_push_library_fcm_5.1.1.55.jar')
+    api files('libs/morpheus/mqtt-android-push_1.0.0.12.jar')
+    api files('libs/morpheus/netty-common-4.0.19.Final.jar')
+    api files('libs/morpheus/universal-image-loader-1.9.3.jar')
+
+    // -- 키패드보안 : 라온시큐어
+    api files('libs/mtk/mtk_v4.6.0.41.jar')
+    api files('libs/mtk/RSLicenseSDK_1.0.2.jar')  //라이선스체크용
+
+    // -- 웹/앱 백신 : 라온시큐어
+    //api files('libs/mvaccine/core_b2b2c_3.6.1.2291_190523.jar')                                   // 20190711 버전업
+    api files('libs/mvaccine/core_b2b2c_3.6.4.2293_191119_v2.jar')                                  // 20191121 버전업(안드로이드Q대응)
+    api files('libs/mvaccine/mVaccine-commons.jar')
+
+    // -- 공동인증 : 드림시큐리티
+    //api files('libs/magicxsign/MagicXSign.jar')
+    api files('libs/magicxsign/MagicXSign_1.0.9.4.jar')                                             // 20190711 버전업
+
+    // -- 웹 위변조 방지 : 익스트러스
+    api files('libs/appdefence/obf-exafe-exclusive-core-2.1.7.jar')
+
+    // -- 구간암호화 : 익스트러스
+    api files('libs/e2e/INICrypto_v4.1.2.jar')
+
+    // -- 기타
+    api files('libs/xmlsec/xmlsec-2.0.jar')
+    implementation "androidx.core:core-ktx:1.5.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+repositories {
+    mavenCentral()
+}

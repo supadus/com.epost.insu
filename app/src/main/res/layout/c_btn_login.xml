@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    로그인 방법 버튼
+    * 2019-01-20    노지민     : 인증 버튼 하단문구 가운데 정렬
+
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/btn_w_r_selector"
+    android:paddingTop="14dp"
+    android:paddingLeft="0dp"
+    android:paddingBottom="0dp"
+    android:paddingRight="0dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/imageView"
+            android:gravity="left"
+            android:textColor="@color/colorText_10"
+            android:textSize="@dimen/label_small_size"
+            tools:text="[인증 이름]" />
+
+
+        <ImageView
+
+            android:id="@+id/imageView"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_pattern" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+
+
+        android:id="@+id/textViewSub"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="-7dp"
+        android:ellipsize="marquee"
+        android:gravity="bottom|center_horizontal"
+        android:marqueeRepeatLimit="5"
+        android:singleLine="true"
+        android:textColor="@color/colorText_11"
+        android:textSize="@dimen/label_very_small_dp_size"
+        android:visibility="invisible"
+        tools:ignore="RtlHardcoded"
+        tools:text="[안내 메시지 내용]"
+        tools:visibility="visible" />
+
+    <!--android:maxLines="1"-->
+</LinearLayout>

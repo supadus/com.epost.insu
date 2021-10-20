@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- fragment_certificate_detail (공동인증서 상세) 레이아웃 -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_default_padding">
+
+                <TextView
+                    android:id="@+id/fragment_textLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/colorText_0"
+                    android:textSize="@dimen/label_default_size"
+                    tools:text="공동인증서 확인"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/border_white">
+
+                    <!-- 용도 -->
+                    <include
+                        android:id="@+id/label_TextReqType01"
+                        layout="@layout/layout_label_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"/>
+
+                    <!-- 사용자 -->
+                    <include
+                        android:id="@+id/label_TextReqType02"
+                        layout="@layout/layout_label_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"/>
+
+                    <!-- 발급기관 -->
+                    <include
+                        android:id="@+id/label_TextReqType03"
+                        layout="@layout/layout_label_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"/>
+
+                    <!-- 발급일 -->
+                    <include
+                        android:id="@+id/label_TextReqType04"
+                        layout="@layout/layout_label_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"/>
+
+                    <!-- 만료일 -->
+                    <include
+                        android:id="@+id/label_TextReqType05"
+                        layout="@layout/layout_label_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dadada"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            layout="@layout/c_btn_fill_navy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</FrameLayout>

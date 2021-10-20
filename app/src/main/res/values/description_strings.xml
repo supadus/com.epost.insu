@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 접근성 평가를 위한 ContentsDescription 문자열 -->
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <string name="desc_banner_left">이전 광고 화면 이동</string>
+    <string name="desc_banner_right">다음 광고 화면 이동</string>
+    <string name="desc_call_center">고객센터 전화연결</string>
+    <string name="desc_reservation_counseling">고객센터 상담예약</string>
+    <string name="desc_app">지급청구앱 간략 설명</string>
+    <string name="desc_back">이전화면 이동</string>
+    <string name="desc_close">닫기</string>
+    <string name="desc_reg">등록</string>
+    <string name="desc_edt_name">이름</string>
+    <string name="desc_edt_another_parent_name">다른 친권자 이름</string>
+    <string name="desc_edt_resident_first">주민등록번호 앞자리</string>
+    <string name="desc_edt_resident_last">주민등록번호 뒷자리</string>
+    <string name="desc_edt_password">비밀번호 최소 6자리 이상</string>
+    <string name="desc_edt_banck_account">계좌번호</string>
+    <string name="desc_app_title">우체국 보험 타이틀</string>
+    <string name="desc_btn_login">로그인 하기</string>
+    <string name="desc_btn_logout">로그아웃 하기</string>
+    <string name="desc_btn_setting">설정 하기</string>
+    <string name="desc_btn_close_dlg">알림창 닫기</string>"
+    <string name="desc_push_off">푸시알림 끄기</string>
+    <string name="desc_push_on">푸시알림 켜기</string>
+    <string name="desc_dash_line">구분선</string>
+
+    <string name="desc_expand_doc_1" >공통서류 내용 보기</string>
+    <string name="desc_collpse_doc_1">공통서류 내용 숨기기</string>
+    <string name="desc_expand_doc_2" >재해사고 증명서류(우선순위 참조) 내용 보기</string>
+    <string name="desc_collpse_doc_2">재해사고 증명서류(우선순위 참조) 내용 숨기기</string>
+    <string name="desc_expand_doc_3" >사망보험금 청구서류 내용 보기</string>
+    <string name="desc_collpse_doc_3">사망보험금 청구서류 내용 숨기기</string>
+    <string name="desc_expand_doc_4" >장해급부금 청구서류 내용 보기</string>
+    <string name="desc_collpse_doc_4">장해급부금 청구서류 내용 숨기기</string>
+    <string name="desc_expand_doc_5" >진단급부금 청구서류 내용 보기</string>
+    <string name="desc_collpse_doc_5">진단급부금 청구서류 내용 숨기기</string>
+    <string name="desc_expand_doc_6" >수술급부금 청구서류 내용 보기</string>
+    <string name="desc_collpse_doc_6">수술급부금 청구서류 내용 숨기기</string>
+    <string name="desc_expand_doc_7" >통원급부금 청구서류 내용 보기</string>
+    <string name="desc_collpse_doc_7">통원급부금 청구서류 내용 숨기기</string>
+    <string name="desc_expand_doc_8" >납입면제 안내 내용 보기</string>
+    <string name="desc_collpse_doc_8">납입면제 안내 내용 숨기기</string>
+    <string name="desc_expand_doc_9" >실손의료비보험 청구서류 안내 내용 보기</string>
+    <string name="desc_collpse_doc_9">실손의료비보험 청구서류 안내 내용 숨기기</string>
+    <string name="desc_expand_doc_10" >단체보장보험 청구서류 안내 내용 보기</string>
+    <string name="desc_collpse_doc_10">단체보장보험 청구서류 안내 내용 숨기기</string>
+    <string name="desc_expand_doc_11" >구비서류 유의사항 안내 내용 보기</string>
+    <string name="desc_collpse_doc_11">구비서류 유의사항 안내 내용 숨기기</string>
+    <string name="desc_expand_doc_12" >입원급부금 청구서류 내용 보기</string>
+    <string name="desc_collpse_doc_12">입원급부금 청구서류 내용 숨기기</string>
+    <string name="desc_expand_doc_13" >치아보험 청구서류 내용 보기</string>
+    <string name="desc_collpse_doc_13">치아보험 청구서류 내용 숨기기</string>
+
+
+    <string name="desc_mod_mobile">휴대폰 번호 수정</string>
+    <string name="desc_search_addr">새창에서 주소검색 버튼</string>
+    <string name="desc_cancel_reg_finger">지문등록 종료</string>
+    <string name="desc_cancel_reg_bio">간편인증 등록/변경 종료</string>
+    <string name="desc_cancel_del_bio">간편인증 조회/해지 종료</string>
+
+    <string name="desc_sms_agree_yes"    >SMS 알림서비스 신청여부, 예 선택됨</string>
+    <string name="desc_sms_agree_no"     >SMS 알림서비스 신청여부, 아니오 선택됨</string>
+    <string name="desc_sms_agree_yes_btn">SMS 알림서비스 신청여부 예</string>
+    <string name="desc_sms_agree_no_btn" >SMS 알림서비스 신청여부 아니오</string>
+    <string name="desc_car_insure_yes"    >자동차보험, 예 선택됨</string>
+    <string name="desc_car_insure_no"     >자동차보험, 아니오 선택됨</string>
+    <string name="desc_car_insure_yes_btn">자동차보험 예</string>
+    <string name="desc_car_insure_no_btn" >자동차보험 아니오</string>
+    <string name="desc_industry_insure_yes"    >산업재해보험, 예 선택됨</string>
+    <string name="desc_industry_insure_no"     >산업재해보험, 아니오 선택됨</string>
+    <string name="desc_industry_insure_yes_btn">산업재해보험 예</string>
+    <string name="desc_industry_insure_no_btn" >산업재해보험 아니오</string>
+    <string name="desc_police_yes"    >경찰서신고, 예 선택됨</string>
+    <string name="desc_police_no"     >경찰서신고, 아니오 선택됨</string>
+    <string name="desc_police_yes_btn">경찰서신고 예</string>
+    <string name="desc_police_no_btn" >경찰서신고 아니오</string>
+    <string name="desc_other_join_yes"    >가입여부, 예 선택됨</string>
+    <string name="desc_other_join_no"     >가입여부, 아니오 선택됨</string>
+    <string name="desc_other_join_yes_btn">가입여부 예</string>
+    <string name="desc_other_join_no_btn" >가입여부 아니오</string>
+    <string name="desc_silson_yes"    >실손가입여부(단체실손포함), 예 선택됨</string>
+    <string name="desc_silson_no"     >실손가입여부(단체실손포함), 아니오 선택됨</string>
+    <string name="desc_silson_yes_btn">실손가입여부(단체실손포함) 예</string>
+    <string name="desc_silson_no_btn" >실손가입여부(단체실손포함) 아니오</string>
+    <string name="desc_sex_man"  >성별, 남 선택됨</string>
+    <string name="desc_sex_woman">성별, 여 선택됨</string>
+    <string name="desc_sex_no"   >성별, 선택안함</string>
+
+    <string name="desc_check">동의하기 체크박스</string>
+    <string name="desc_uncheck">동의하지 않기 체크박스</string>
+
+    <string name="desc_relation">계약관계자유형 2항목 중 단일선택</string>
+    <string name="desc_parent_type">자녀와의관계 2항목 중 단일선택</string>
+    <string name="desc_parent_agree">공동친권행사 여부 2항목 중 단일선택</string>
+    <string name="desc_parent_alone_reason">단독친권행사 사유 3항목중 단일선택</string>
+    <string name="desc_category">청구유형 3항목 중 단일선택</string>
+    <string name="desc_reason">발생원인 3항목 중 단일선택</string>
+    <string name="desc_type">청구사유 9항목 중 다중선택</string>
+    <string name="desc_smbr_psbl">고객님의 보험계약중 부담보 내역이 존재합니다.\n 확인하시려면, 내역 조회 버튼을 클릭하세요.</string>
+
+    <string name="desc_add_photo">추가서류 사진첨부</string>
+    <string name="desc_take_picture">추가서류 촬영</string>
+    <string name="desc_add_photo_2">신분증 사진첨부</string>
+    <string name="desc_take_picture_2">신분증 촬영</string>
+
+    <string name="desc_img_remove">삭제</string>
+    <string name="desc_img_get_certification">PC에서 스마트폰으로 인증서 가져오기 아이콘 이미지</string>
+    <string name="desc_img_search">검색</string>
+
+    <string name="desc_img_manage_finger">지문인증 관리 아이콘 이미지</string>
+    <string name="desc_img_manage_pin">PIN인증 관리 아이콘 이미지</string>
+    <string name="desc_img_auth_pin_c">PIN인증 로그인 완료 아이콘 이미지</string>
+    <string name="desc_img_auth_kakao_c">카카오페이인증 로그인 완료 아이콘 이미지</string>
+    <string name="desc_img_auth_pattern_c">패턴인증 로그인 완료 아이콘 이미지</string>
+    <string name="desc_img_auth_common_c">인증 로그인 완료 아이콘 이미지</string>
+
+    <string name="desc_img_guide_req">보험금청구 절차안내 아이콘 이미지</string>
+    <string name="desc_img_guide_doc">구비서류 안내 아이콘 이미지</string>
+    <string name="desc_img_login_type">로그인 방법 선택 아이콘 이미지</string>
+    <string name="desc_img_req">보험금청구 아이콘 이미지</string>
+    <string name="desc_img_guide_person">친절한 우체국보험 이미지</string>
+    <string name="desc_img_remove_pin">PIN번호 삭제 아이콘 이미지</string>
+    <string name="desc_img_remove_finger">지문인증 해지 아이콘 이미지</string>
+    <string name="desc_img_auth_finger">지문인증 로그인 아이콘 이미지</string>
+    <string name="desc_img_auth_finger_c">지문인증 로그인 완료 아이콘 이미지</string>
+    <string name="desc_img_auth_mobile">휴대폰인증 아이콘 이미지</string>
+    <string name="desc_img_complete_reg_pin">PIN번호 등록 완료 아이콘 이미지</string>
+    <string name="desc_img_complete_reg_finger">지문인증 등록 완료 아이콘 이미지</string>
+    <string name="desc_img_carefule_camera">사진 촬영 시 주의사항 아이콘 이미지</string>
+    <string name="desc_img_good">좋은예 아이콘 이미지</string>
+    <string name="desc_img_bad">나쁜예 아이콘 이미지</string>
+    <string name="desc_img_good_sample">올바른 촬영 예시 샘플 이미지, 서류가 구겨지지 않고 초점이 명확하며 반듯하게 촬영한 상태</string>
+    <string name="desc_img_bad_sample_1">서류가 구겨진 상태 샘플 이미지</string>
+    <string name="desc_img_bad_sample_2">흔들려 초점이 없는 상태 샘플 이미지</string>
+    <string name="desc_img_bad_sample_3">서류 일부가 잘린 상태 샘플 이미지</string>
+    <string name="desc_img_bad_sample_4">비스듬히 촬영한 상태</string>
+    <string name="desc_img_step_1">첫번째 단계</string>
+    <string name="desc_img_step_2">두번째 단계</string>
+    <string name="desc_img_step_3">세번째 단계</string>
+    <string name="desc_img_step_4">네번째 단계</string>
+    <string name="desc_img_step_5">다섯번째 단계</string>
+    <string name="desc_img_step_6">여섯번째 단계</string>
+    <string name="desc_img_complete_reqpay">보험금청구신청 완료 아이콘 이미지</string>
+    <string name="desc_img_manage_certificate">공동인증서 관리 아이콘 이미지</string>
+    <string name="desc_img_auth_certificate_c">공동인증서 로그인 완료 아이콘 이미지</string>
+    <string name="desc_img_permission">권한안내 아이콘 이미지</string>
+    <string name="desc_img_permission_storage">저장공간 아이콘 이미지</string>
+    <string name="desc_img_permission_phone">전화번호 아이콘 이미지</string>
+    <string name="desc_img_permission_camera">카메라 아이콘 이미지</string>
+    <string name="desc_img_reg_finger">지문인증 등록 아이콘 이미지</string>
+    <string name="desc_img_need_add_doc">서류보완 필요 아이콘 이미지</string>
+    <string name="desc_img_fail_req">보험청구신청 실패 아이콘 이미지</string>
+    <string name="desc_img_empty_list">조회결과 없음 아이콘 이미지</string>
+    <string name="desc_img_smartbank">우체국 예금 이미지</string>
+
+    <string name="desc_btn_req_benefit">보험금신청 버튼</string>
+    <string name="desc_btn_req_child">자녀보험금신청 버튼</string>
+    <string name="desc_btn_search_req">지급진행조회 및 서류보완 버튼</string>
+    <string name="desc_btn_setting_service">이용약관 버튼</string>
+    <string name="desc_btn_setting_privacy">개인정보처리방침 버튼</string>
+    <string name="desc_btn_shopping">우체국쇼핑 버튼</string>
+    <string name="desc_btn_smartbank">우체국예금 버튼</string>
+    <string name="desc_btn_medianews">미디어뉴스 버튼</string>
+    <string name="desc_btn_twitter">트위터 버튼</string>
+    <string name="desc_btn_chatbot">우체국금융 챗봇 버튼</string>
+    <string name="desc_btn_ars">보험ARS안내</string>
+    <string name="desc_label_mobile_agree_1">본인확인 서비스 이용약관 전문보기 버튼</string>
+    <string name="desc_label_mobile_agree_2">개인정보 이용 및 제공동의 전문보기 버튼</string>
+    <string name="desc_label_mobile_agree_3">고유식별정보 처리동의 전문보기 버튼</string>
+    <string name="desc_label_mobile_agree_4">통신사 본인확인서비스 이용동의 전문보기 버튼</string>
+
+
+    <string name="desc_next">다음</string>
+
+    <string name="announce_push_on">푸시알림 켜짐</string>
+    <string name="announce_push_off">푸시알림 꺼짐</string>
+    <string name="announce_check_on">체크</string>
+    <string name="announce_check_off">체크해제</string>
+    <string name="announce_auth_finger">본인을 인증하려면 지문을 사용하세요.</string>
+    <string name="announce_first_page">첫번째 페이지입니다.</string>
+    <string name="announce_last_page">마지막 페이지입니다.</string>
+
+    <string name="desc_number_1">일.</string>
+    <string name="desc_number_2">이.</string>
+    <string name="desc_number_3">삼.</string>
+    <string name="desc_number_4">사.</string>
+    <string name="desc_number_5">오.</string>
+    <string name="desc_number_6">육.</string>
+    <string name="desc_number_7">칠.</string>
+    <string name="desc_number_8">팔.</string>
+    <string name="desc_number_9">구.</string>
+    <string name="desc_number_10">십.</string>
+</resources>

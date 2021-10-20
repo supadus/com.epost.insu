@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#3566A8"
+    android:paddingBottom="4dp"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingTop="5dp" >
+
+    <ImageButton
+        android:id="@+id/transkey_navi_pre_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/transkey_navi_pre_btn_english"
+        android:contentDescription="@string/transkey_before"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/transkey_navi_next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/transkey_navi_pre_button"
+        android:background="@drawable/transkey_navi_next_btn_english"
+        android:contentDescription="@string/transkey_next"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/transkey_navi_last_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/transkey_navi_pre_button"
+        android:layout_alignTop="@id/transkey_navi_pre_button"
+        android:layout_centerInParent="true" />
+
+    <ImageButton
+        android:id="@+id/transkey_navi_complete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/transkey_navi_complete_btn_english"
+        android:contentDescription="@string/transkey_complete"
+        android:visibility="visible" />
+
+</RelativeLayout>

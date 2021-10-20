@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/transkey_pattern_bg"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        >
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/pl_button_cancel"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/transkey_pattern_btn_close_selector"
+            android:layout_marginRight="13dp"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/pl_logo"
+        android:layout_width="141dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="23dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/transkey_pattern_logo_anim"
+        />
+
+    <TextView
+        android:id="@+id/pl_message_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.3dp"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textSize="19.7sp"
+        android:textColor="#394349"
+        android:lineSpacingExtra="-9.5sp"/>
+
+    <TextView
+        android:id="@+id/pl_message_text_wrong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19.7dp"
+        android:textSize="16.8sp"
+        android:textColor="#ff4311"
+        android:lineSpacingExtra="-6.8sp"
+        android:gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="40dp"
+        android:orientation="vertical">
+
+        <com.softsecurity.transkey.pattern.TransKeyPatternView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            class="com.me.zhanghai.android.patternlock.PatternView"
+            android:id="@+id/pl_pattern"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

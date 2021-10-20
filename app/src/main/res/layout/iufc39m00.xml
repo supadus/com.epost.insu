@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 인증 > 지문인증 > 지문인증등록 (화면 ID : IUFC33M00) - #39 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/layout_default_padding">
+
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/layout_default_padding"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/desc_img_complete_reg_finger"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_login_finger" />
+
+            <TextView
+                android:id="@+id/resultMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorText_8"
+                android:textSize="@dimen/label_default_size" />
+
+            <TextView
+                android:id="@+id/textRegDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp"
+                android:textColor="@color/colorText_11"
+                android:textSize="@dimen/label_small_size" />
+
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/c_btn_fill_navy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>

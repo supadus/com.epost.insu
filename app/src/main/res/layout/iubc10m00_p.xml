@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 스마트보험금청구 > 스마트보험금청구접수신청 (화면 ID : IUBC10M00) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- 타이틀 레이아웃 -->
+    <include
+        layout="@layout/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 컨텐츠 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    style="?attr/borderlessButtonStyle">
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/Toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:contentScrim="@android:color/transparent"
+                        app:layout_scrollFlags="scroll|snap|enterAlways"
+                        >
+
+                        <!-- 키패드 사용시 height 60dp 고정이였으나 키패드 사용 안하게되어 wrap_content로 변경하였음 -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp">
+
+                            <com.epost.insu.control.StepIndicator
+                                android:id="@+id/activity_req_indicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                app:bgNormal="@drawable/oval_white"
+                                app:bgSelected="@drawable/oval_yellow"
+                                app:lineColor="#1d365e"
+                                app:lineThick="1dp"
+                                app:stepCount="4"
+                                app:stepSize="25dp" />
+                        </FrameLayout>
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <com.epost.insu.common.CustomViewPager
+                    android:id="@+id/activity_req_viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+        </LinearLayout>
+
+        <!-- 내부고객 패스워드 입력 레이아웃 -->
+        <RelativeLayout
+            android:id="@+id/relTempPw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#90000000"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:background="@drawable/border_dlg"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/textTempPwGuide"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_default_size"
+                    android:textColor="@color/colorText_0"
+                    />
+
+                <EditText
+                    android:id="@+id/edtPw"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_white"
+                    android:textSize="@dimen/label_default_size"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="5dp"/>
+
+                <!-- 취소 | 확인 버튼 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <Button
+                        android:id="@+id/btnCancelPw"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/button_text_size"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:background="@drawable/btn_grey_light_selector"
+                        android:text="취소"
+                        style="?attr/borderlessButtonStyle"
+                        />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"/>
+
+                    <Button
+                        android:id="@+id/btnOkPw"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/button_text_size"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:background="@drawable/btn_navy_selector"
+                        android:text="확인"
+                        style="?attr/borderlessButtonStyle"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

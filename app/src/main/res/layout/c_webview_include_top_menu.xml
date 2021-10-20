@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2019-02-06 웹뷰 - 상단메뉴 포함 -->
+
+<!-- WebView-->
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription">
+
+    <!-- Main Content Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 타이틀바 -->
+        <include
+            layout="@layout/layout_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="false"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:background="#F3F3F3">
+
+            <!-- 메인메뉴 영역 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="WebViewLayout">
+
+                <!-- 상단 Tab 메뉴-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_empty_selector"
+                        android:gravity="top|center_horizontal"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:onClick="onClickReqWeb"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:tag="1"
+                        android:text="@string/btn_insure_goods"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/button_text_small_size" />
+
+                    <Button
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_empty_selector"
+                        android:gravity="top|center_horizontal"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:onClick="onClickReqWeb"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:tag="2"
+                        android:text="@string/btn_my_page"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/button_text_small_size" />
+
+                    <Button
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_empty_selector"
+                        android:gravity="top|center_horizontal"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:onClick="onClickReqWeb"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:tag="3"
+                        android:text="@string/btn_customer_center"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/button_text_small_size" />
+
+                    <Button
+                        android:id="@+id/btnTop1"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_empty_selector"
+                        android:gravity="top|center_horizontal"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:onClick="onClickReqWeb"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:tag="4"
+                        android:text="@string/btn_more_service"
+                        android:textColor="@color/colorText_0"
+                        android:textSize="@dimen/button_text_small_size" />
+                </LinearLayout>
+
+                <!-- 라인 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#CCCCCC"/>
+
+                <!--<ImageButton-->
+                <!--android:id="@+id/btnRemove"-->
+                <!--android:layout_width="27dp"-->
+                <!--android:layout_height="27dp"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/ic_close_2"-->
+                <!--tools:ignore="ContentDescription,RtlHardcoded" />-->
+
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"/>
+
+
+                <!--<ProgressBar-->
+                    <!--android:id="@+id/progressBar"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_gravity="center" />-->
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</merge>

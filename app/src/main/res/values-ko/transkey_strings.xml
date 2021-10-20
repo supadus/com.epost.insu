@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="transkey_clear_all">전체삭제</string>
+    <string name="transkey_before">이전</string>
+    <string name="transkey_next">다음</string>
+    <string name="transkey_cancel">취소</string>
+    <string name="transkey_complete">완료</string>
+    <string name="transkey_input_cancel">입력취소</string>
+    <string name="transkey_input_complete">입력완료</string>
+    <string name="transkey_ok">확인</string>
+    <string name="transkey_input_security">보안입력</string>
+    <string name="transkey_input_comfirm">입력확인</string>
+</resources>
